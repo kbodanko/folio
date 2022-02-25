@@ -1,0 +1,237 @@
+$dark-blue: #ffb703;
+
+
+.wrapper {
+    /* height: 100vh; */
+    /*This part is important for centering*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  
+  .typing-demo {
+    width: 17ch;
+    animation: typing 1.5s steps(17), blink .5s  2s alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: black;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* background: linear-gradient(90deg, red, orange); */
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 24px;
+  }
+  .red, .sh{
+    font-size: 12rem;
+    position: relative;
+    top: 9rem;
+    letter-spacing: -10px;
+    text-align: center;
+    width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-variant: small-caps;
+font-family: 'Montserrat', sans-serif;
+  }
+  .red{
+    margin-bottom: -14rem;
+
+}
+.red_p{
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+  /* background: linear-gradient(90deg, red, orange); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sh_p{
+  text-shadow: 0px -7px 9px #a5a19d;
+  -webkit-text-fill-color: transparent;
+
+  animation: shadow 1s
+}
+.first_nme{
+  display: flex;
+  justify-content: center;
+  font-family: 'Indie Flower', cursive;  font-size: 3rem;
+  transform: rotate(-5deg);
+  color: #132b7c;
+position: relative;
+top: 1.5rem;
+z-index: 2;
+}
+#corner_wr{
+    width: 173rem;
+    height: 50rem;
+    overflow: hidden;
+position: fixed;
+transform: rotate(41deg);
+top: -47rem;
+/* top: -100rem; */
+animation: slide 1.3s;
+background: linear-gradient(7deg, rgb(224, 5, 158), rgb(255, 61, 181));// body{
+// animation: changeColor 5s infinite;
+}
+.first{
+    animation: show .1s;
+}
+.second{
+    animation: show .2s;
+}
+.third{
+    animation: show .3s;
+}
+.fouhrt{
+    animation: show .4s;
+}
+.fifth{
+    animation: show .5s;
+}
+.sixth{
+    animation: show .6s;
+}
+.seventh{
+    animation: show .7s;
+}
+.eighth{
+    animation: show .8s;
+}
+.ninth{
+    animation: show .9s;
+}
+
+
+
+
+// }
+
+#svg g:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0%;
+  opacity: 0.7;
+  height: 25px;
+  background: #fff;
+  animation: fadein_left 3s;
+}
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: blue;}
+  }
+@keyframes changeColor{
+    0%{
+        background-color: $dark-blue;
+    }
+    50%{
+        background-color: #1d2d6d;
+    }
+    100%{
+        background-color: $dark-blue;
+    }
+}
+@keyframes fadein_left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+  @keyframes slide{
+    0%{top: -150rem;}
+  
+  100%{top: -47rem;}
+  }
+  @keyframes slideMobile{
+    0%{top: -150rem;}
+  
+  100%{top: -57rem;}
+  }
+  @keyframes shadow{
+    0%{
+      text-shadow: 0px -10px 12px rgba(219, 201, 182, 0);
+      /* font-size: 11.9rem; */
+    }
+    100%{
+      text-shadow: 0px -7px 12px rgb(179, 174, 170);
+      /* font-size: 12rem; */
+    }
+  }
+  @keyframes shine {
+    0% {
+      background-position-x: 300%;
+    }
+    100% {
+      background-position-x: -13rem;
+    }
+  }
+
+  @keyframes show{
+    from {
+        opacity: 100%;
+      }to{
+        opacity: 0;
+      }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }to{
+      width: 100;
+    }
+  }
+      
+  @keyframes blink {
+    100% {
+      border-color: black
+    }
+    0% {
+      border-color: transparent
+    }
+  }
+  @media(max-width:500px){
+    .first_nme{
+      margin-top: -7.3rem;
+      transform: rotate(-10deg);
+    }
+    .first_nme svg{
+      width: 35%;
+    }
+    .red{
+      margin-bottom: -12.3rem
+    }
+    .red, .sh{
+      margin-top: 8rem;
+      font-size: 4rem;
+      letter-spacing: -2px;
+    }
+    #corner{
+      animation: slideMobile 1.3s  ;
+      transform: rotate(50deg);
+      top: -57rem;    }
+  }
