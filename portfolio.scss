@@ -194,6 +194,7 @@ position: absolute;
 top: 20rem;
 left: 2rem;
 z-index: 2;
+margin-top: 2rem;
 // visibility: hidden;
 }
 .home_description_name{
@@ -214,7 +215,7 @@ font-variant: small-caps;
 font-weight: 900;
 margin: 0;
   margin-top: 0px;
-margin-top: -2.5rem;  
+margin-top: -.5rem;  
     text-shadow: 0 0 4px $graphite;
     visibility: hidden;
     animation-duration: .4s;
@@ -246,6 +247,7 @@ top: 37rem;
 left: 4rem;
 color: white;
 background-color: $orange;
+margin-top: 2rem;
 padding: .8rem;
 border-radius: 12px;
 border: 0;
@@ -321,8 +323,8 @@ background-size: cover;
 #post_apo{
     background-image: url("xd/mob/nuc.png");
 }
-#be_good{
-    background-image: url("xd/good.png");
+#wine_page{
+    background-image: url("xd/mob/wine.png");
 }
 .more{
     height: 100%;
@@ -456,10 +458,11 @@ font-weight: 200;
   }
 .swiper-button-next, .swiper-button-prev{
     font-weight: 900 !important;
-    height: 16rem !important;
+    height: calc(var(--swiper-navigation-size)/ 44 * 27) !important;
     background-color: rgba(10, 10, 10, 0.7) !important;
-    padding: 0 1.5rem;
-    margin: 0 !important;
+    padding: 1.5rem;
+    margin-top: 5rem !important;
+    border-radius: 50%;
 }
 .swiper {
     display: flex;
@@ -468,10 +471,16 @@ font-weight: 200;
     height: 100%;
     margin: 3rem 0;
     animation-delay: .3s;
+    cursor: pointer;
     visibility: hidden;
+    overflow-y: visible !important;
+    overflow-x: hidden !important;
   }
+.swiper_low_brightness:hover .swiper-slide-img{
+    filter: brightness(20%);
+}
 .swiper-wrapper{
-    height: 16rem !important;
+    // height: 15rem !important;
     // overflow: hidden !important;
 }
   .swiper-slide {
@@ -497,8 +506,9 @@ font-weight: 200;
   .swiper-slide-img {
     display: block;
     width: 100%;
+    height: 15rem !important;
     object-fit: cover;
-    background-position: top;
+    object-position: top;
   }
   .swiper-button-prev, .swiper-button-next{
       top: 0 !important;
@@ -509,6 +519,9 @@ font-weight: 200;
   .swiper-button-next{
       right: 0 !important;
   }
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0 !important;
+}
 .portfolio .example_photo{
     margin: 3rem 0;
 }
@@ -535,6 +548,9 @@ font-weight: 200;
 // #portfolio_carousel2{
 //     background-image: url(xd/mob/good.png);
 // }
+.technologie{
+    margin-top: 7rem;
+}
 .tech_skill_wraper{
     display: flex;
     justify-content: space-around;
@@ -548,6 +564,7 @@ font-weight: 200;
 }
 .tech_skill_tittle{
     text-align: center;
+    font-size: .9rem;
 }
 .tech_skill_icon{
     height: 40px;
@@ -642,7 +659,7 @@ visibility: visible;
   }}
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 120px;}
+    to{width: 125px;}
   }
   @keyframes blinkTextCursor{
       from{border-right-color: transparent;}

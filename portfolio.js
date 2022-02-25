@@ -23,19 +23,38 @@ let isMenuOpen = false;
 let toparrow = document.querySelector('.toparrow');
 let more = document.querySelectorAll('.example_photo_more');
 let postApo = document.querySelector('#post_apo');
-let beGood = document.querySelector('#be_good');
+let winePage = document.querySelector('#wine_page');
+let screenHeight = window.innerHeight;
+let swiperButtons = document.querySelector('.swiper-button-prev', '.swiper-button-next');
+let prev = document.querySelector('.swiper-button-prev');
+let swiperImg = document.querySelectorAll('.swiper-slide-img');
+
+prev.addEventListener('mouseover', function () {
+    console.log('light');
+    for (let i = 0; i < swiperImg.length; i++) {
+        console.log(i);
+        swiperImg[i].style.filter = 'brightness(100%)';
+        console.log(swiperImg[i].style.filter);
+    }
+});
+// for (let i = 0; i < swiperButtons.length; i++) {
+//     swiperButton[i].addEventListener('mouseover', function () {
+//         swiperImg.style.filter = 'brightness:99%';
+//     });
+
+// }
 
 function scrollToMore() {
     if (event.target === more[0] || event.target === postApo)
         document.querySelector('#more_graphics').scrollIntoView({ behavior: "smooth" });
-    else if (event.target === more[1] || event.target === beGood)
+    else if (event.target === more[1] || event.target === winePage)
         document.querySelector('#more_design').scrollIntoView({ behavior: "smooth" });
 }
 for (let i = 0; i < more.length; i++) {
     more[i].addEventListener(',click', scrollToMore);
 }
 postApo.addEventListener('click', scrollToMore);
-beGood.addEventListener('click', scrollToMore);
+winePage.addEventListener('click', scrollToMore);
 // messengerIcon.addEventListener('mouseover', function () {
 //     messengerIcon.classList.add('animate__headShake');
 // });
@@ -113,7 +132,7 @@ ejectAvatar = function () {
 let aboutHeaders = document.querySelectorAll('.about_header');
 aboutHeadersSlide = function () {
     for (let i = 0; i < aboutHeaders.length; i++) {
-        if (aboutHeaders[i].getBoundingClientRect().top < 700) {
+        if (aboutHeaders[i].getBoundingClientRect().top < screenHeight) {
             aboutHeaders[i].style.visibility = 'visible';
             aboutHeaders[i].classList.add('animate__animated', 'animate__zoomIn');
         }
@@ -127,7 +146,7 @@ function tittleSlide() {
     let topHeight = window.pageYOffset + window.innerHeight;
     for (let i = 0; i < styleTittles.length; i++) {
         // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
-        if (styleTittles[i].getBoundingClientRect().top < 700) {
+        if (styleTittles[i].getBoundingClientRect().top < screenHeight) {
             styleTittles[i].style.visibility = 'visible';
             styleTittles[i].classList.add('animate__animated', 'animate__bounceInLeft');
 
@@ -135,7 +154,7 @@ function tittleSlide() {
     }
     for (let i = 0; i < tittles.length; i++) {
         // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
-        if (tittles[i].getBoundingClientRect().top < 700) {
+        if (tittles[i].getBoundingClientRect().top < screenHeight) {
             tittles[i].style.visibility = 'visible';
             tittles[i].classList.add('animate__bounceInLeft');
         }
@@ -145,7 +164,7 @@ let describeParas = document.querySelectorAll('.about_describe_paras');
 describeParasSlide = function () {
     for (let i = 0; i < describeParas.length; i++) {
         // console.log(describeParas[i].getBoundingClientRect().top, topHeight, describeParas[i].classList);
-        if (describeParas[i].getBoundingClientRect().top < 700) {
+        if (describeParas[i].getBoundingClientRect().top < screenHeight) {
             describeParas[i].style.visibility = 'visible';
             describeParas[i].classList.add('animate__animated', 'animate__bounceInLeft');
         }
@@ -161,7 +180,7 @@ let aboutWorksIconsWraper = document.querySelectorAll('.about_works_icons_wraper
 function showIcons() {
     for (let i = 0; i < aboutWorksIconsWraper.length; i++) {
         // console.log(aboutWorksIconsWraper[i].getBoundingClientRect().top, topHeight, aboutWorksIconsWraper[i].classList);
-        if (aboutWorksIconsWraper[i].getBoundingClientRect().top < 700) {
+        if (aboutWorksIconsWraper[i].getBoundingClientRect().top < screenHeight) {
             aboutWorksIconsWraper[i].style.visibility = 'visible';
             aboutWorksIconsWraper[i].classList.add('animate__animated', 'animate__fadeIn');
         }
@@ -172,7 +191,7 @@ function techSkillsFlip() {
     let animationDelay = 0.5;
     for (let i = 0; i < techSkills.length; i++) {
         const techSkill = techSkills[i];
-        if (techSkill.getBoundingClientRect().top < 700) {
+        if (techSkill.getBoundingClientRect().top < screenHeight) {
             techSkill.style.visibility = 'visible';
             animationDelay = animationDelay + 0.2;
             techSkill.style.animationDelay = animationDelay + 's';
@@ -183,7 +202,7 @@ function techSkillsFlip() {
 function portfolioDisplay() {
     let portfolio = document.querySelector('.portfolio_header');
     setTimeout(() => {
-        if (portfolio.getBoundingClientRect().top < 700) {
+        if (portfolio.getBoundingClientRect().top < screenHeight) {
             portfolio.style.visibility = 'visible';
             portfolio.classList.add('animate__animated', 'animate__tada');
         }
@@ -192,7 +211,7 @@ function portfolioDisplay() {
 function showExamplePhoto() {
     let examplePhoto = document.querySelectorAll('.example_photo');
     for (let i = 0; i < examplePhoto.length; i++) {
-        if (examplePhoto[i].getBoundingClientRect().top < 700) {
+        if (examplePhoto[i].getBoundingClientRect().top < screenHeight) {
             examplePhoto[i].style.visibility = 'visible';
             if (i === 0) {
                 examplePhoto[i].classList.add('animate__animated', 'animate__fadeInTopLeft');
@@ -238,10 +257,10 @@ toparrowUpSlideOut();
 for (let i = 0; i < orderButton.length; i++) {
     orderButton[i].addEventListener('mouseover', rubberOrderButton);
     orderButton[i].addEventListener('click', function () {
-        document.querySelector('.pop_up').style.zIndex = '9';
-        document.querySelector('.pop_up').style.visibility = 'visible';
+        popUp.style.zIndex = '9';
+        popUp.style.visibility = 'visible';
         popUp.classList.remove('animate__rollOut');
-        document.querySelector('.pop_up').classList.add('animate__animated', 'animate__rollIn');
+        popUp.classList.add('animate__animated', 'animate__rollIn');
         blurBg();
     });
 
@@ -250,6 +269,9 @@ for (let i = 0; i < orderButton.length; i++) {
 popUp.addEventListener('click', function () {
     popUp.classList.remove('animate__rollIn');
     popUp.classList.add('animate__rollOut');
+    setTimeout(() => {
+        popUp.style.visibility = 'hidden';
+    }, 900);
     focusBg();
 });
 sayHi = function () {
@@ -356,7 +378,7 @@ let focusBg = function () {
 function showSwipers() {
     let swipers = document.querySelectorAll('.swiper');
     for (let i = 0; i < swipers.length; i++) {
-        if (swipers[i].getBoundingClientRect().top < 700) {
+        if (swipers[i].getBoundingClientRect().top < screenHeight) {
             swipers[i].style.visibility = 'visible';
             swipers[i].classList.add('animate__animated', 'animate__jackInTheBox');
         }

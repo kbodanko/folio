@@ -209,6 +209,7 @@ nav {
   top: 20rem;
   left: 2rem;
   z-index: 2;
+  margin-top: 2rem;
 }
 
 .home_description_name {
@@ -228,7 +229,7 @@ nav {
   font-weight: 900;
   margin: 0;
   margin-top: 0px;
-  margin-top: -2.5rem;
+  margin-top: -.5rem;
   text-shadow: 0 0 4px #242424;
   visibility: hidden;
   animation-duration: .4s;
@@ -263,6 +264,7 @@ nav {
   left: 4rem;
   color: white;
   background-color: #ffae00;
+  margin-top: 2rem;
   padding: .8rem;
   border-radius: 12px;
   border: 0;
@@ -353,8 +355,8 @@ nav {
   background-image: url("xd/mob/nuc.png");
 }
 
-#be_good {
-  background-image: url("xd/good.png");
+#wine_page {
+  background-image: url("xd/mob/wine.png");
 }
 
 .more {
@@ -510,10 +512,11 @@ nav {
 
 .swiper-button-next, .swiper-button-prev {
   font-weight: 900 !important;
-  height: 16rem !important;
+  height: calc(var(--swiper-navigation-size)/ 44 * 27) !important;
   background-color: rgba(10, 10, 10, 0.7) !important;
-  padding: 0 1.5rem;
-  margin: 0 !important;
+  padding: 1.5rem;
+  margin-top: 5rem !important;
+  border-radius: 50%;
 }
 
 .swiper {
@@ -523,11 +526,14 @@ nav {
   height: 100%;
   margin: 3rem 0;
   animation-delay: .3s;
+  cursor: pointer;
   visibility: hidden;
+  overflow-y: visible !important;
+  overflow-x: hidden !important;
 }
 
-.swiper-wrapper {
-  height: 16rem !important;
+.swiper_low_brightness:hover .swiper-slide-img {
+  filter: brightness(20%);
 }
 
 .swiper-slide {
@@ -552,8 +558,9 @@ nav {
 .swiper-slide-img {
   display: block;
   width: 100%;
+  height: 15rem !important;
   object-fit: cover;
-  background-position: top;
+  object-position: top;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -566,6 +573,10 @@ nav {
 
 .swiper-button-next {
   right: 0 !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
 }
 
 .portfolio .example_photo {
@@ -592,6 +603,10 @@ nav {
   box-shadow: 0 0 5px gray;
 }
 
+.technologie {
+  margin-top: 7rem;
+}
+
 .tech_skill_wraper {
   display: flex;
   justify-content: space-around;
@@ -607,6 +622,7 @@ nav {
 
 .tech_skill_tittle {
   text-align: center;
+  font-size: .9rem;
 }
 
 .tech_skill_icon {
@@ -721,7 +737,7 @@ nav {
     width: 0;
   }
   to {
-    width: 120px;
+    width: 125px;
   }
 }
 

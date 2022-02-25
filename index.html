@@ -137,7 +137,8 @@
                         <div class="more">
                             <p class="example_photo_more">Więcej...</p>
                         </div>
-                        <div class="example_photo" id="be_good" alt="webdesign project">
+                        <div class="example_photo" id="wine_page"
+                            alt="screen of the site https://kbodanko.github.io/wine-page/">
                         </div>
                     </div>
 
@@ -251,15 +252,17 @@
                 <div class="style_tittle animate__animated">
                     <p class="tittle animate__animated" id="more_design">Aplikacje & strony WWW</p>
                 </div>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/doc.png"></div>
-                        <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/wine.png"></div>
-                        <div class="swiper-slide">Slide 3</div>
+                <div class="swiper_low_brightness">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/doc.png"></div>
+                            <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/wine.png"></div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
                 <!-- <div class="portfolio_carousel">
                     <div class="portfolio_carousel_example" id="portfolio_carousel1">
@@ -282,17 +285,18 @@
                     </div>
 
                 </div> -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/good.png"></div>
-                        <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mounts.png"></div>
-                        <div class="swiper-slide"><img class="swiper-slide-img" src="xd/phones4.png"></div>
+                <div class="swiper_low_brightness">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mob/good.png"></div>
+                            <div class="swiper-slide"><img class="swiper-slide-img" src="xd/mounts.png"></div>
+                            <div class="swiper-slide"><img class="swiper-slide-img" src="xd/phones4.png"></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
                 </div>
-
             </article>
             <article class="technologie">
                 <div class="style_tittle animate__animated">
@@ -346,6 +350,19 @@
 
     <script type="text/javascript" src="portfolio.js"></script>
     <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
