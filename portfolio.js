@@ -2,6 +2,9 @@ let rootElement = document.documentElement;
 let messengerIcon = document.querySelector('#messengerIcon');
 let githubIcon = document.querySelector('#githubIcon');
 let fbIcon = document.querySelector('#fbIcon');
+let contactMessengerIcon = document.querySelector('#contactMessengerIcon');
+let contactGithubIcon = document.querySelector('#contactGithubIcon');
+let contactFbIcon = document.querySelector('#contactFbIcon');
 let mailIcon = document.querySelector('#mailIcon');
 let blackBg = document.querySelector('.blackBg');
 let orangeBg = document.querySelector('.orangeBg');
@@ -27,16 +30,57 @@ let winePage = document.querySelector('#wine_page');
 let screenHeight = window.innerHeight - 300;
 let swiperButtons = document.querySelector('.swiper-button-prev', '.swiper-button-next');
 let prev = document.querySelector('.swiper-button-prev');
-let swiperImg = document.querySelectorAll('.swiper-slide-img');
+let webImg = document.querySelectorAll('.swiper_slide_web');
+let designImg = document.querySelectorAll('.swiper_slide_design');
 
 prev.addEventListener('mouseover', function () {
     console.log('light');
-    for (let i = 0; i < swiperImg.length; i++) {
+    for (let i = 0; i < webImg.length; i++) {
         console.log(i);
-        swiperImg[i].style.filter = 'brightness(100%)';
-        console.log(swiperImg[i].style.filter);
+        webImg[i].style.filter = 'brightness(100%)';
+        console.log(webImg[i].style.filter);
     }
 });
+prev.addEventListener('mouseleave', function () {
+    console.log('light');
+    for (let i = 0; i < webImg.length; i++) {
+        console.log(i);
+        webImg[i].style.filter = 'brightness(20%)';
+        console.log(webImg[i].style.filter);
+    }
+});
+for (let i = 0; i < designImg.length; i++) {
+    designImg[i].addEventListener('mouseleave', function () {
+        designImg[i].style.filter = 'brightness(100%)';
+    });
+}
+for (let i = 0; i < designImg.length; i++) {
+    designImg[i].addEventListener('mouseover', function () {
+        designImg[i].style.filter = 'brightness(20%)';
+    });
+}
+prev.addEventListener('mouseleave', function () {
+    console.log('light');
+    for (let i = 0; i < designImg.length; i++) {
+        console.log(i);
+        designImg[i].style.filter = 'brightness(20%)';
+        console.log(designImg[i].style.filter);
+    }
+});
+for (let i = 0; i < designImg.length; i++) {
+    designImg[i].addEventListener('mouseleave', function () {
+        designImg[i].style.filter = 'brightness(100%)';
+    });
+}
+for (let i = 0; i < designImg.length; i++) {
+    designImg[i].addEventListener('mouseover', function () {
+        designImg[i].style.filter = 'brightness(20%)';
+    });
+}
+
+
+
+// }
 // for (let i = 0; i < swiperButtons.length; i++) {
 //     swiperButton[i].addEventListener('mouseover', function () {
 //         swiperImg.style.filter = 'brightness:99%';
@@ -45,14 +89,18 @@ prev.addEventListener('mouseover', function () {
 // }
 
 function scrollToMore() {
-    if (event.target === more[0] || event.target === postApo)
+    console.log(event.target === more[0]);
+    if (event.target === document.querySelector('#more_design_p') || event.target === postApo)
         document.querySelector('#more_graphics').scrollIntoView({ behavior: "smooth" });
-    else if (event.target === more[1] || event.target === winePage)
+    else if (event.target === document.querySelector('#more_www_p') || event.target === winePage)
         document.querySelector('#more_design').scrollIntoView({ behavior: "smooth" });
 }
 for (let i = 0; i < more.length; i++) {
     more[i].addEventListener(',click', scrollToMore);
 }
+document.querySelector('#more_design_p').addEventListener('click', scrollToMore);
+document.querySelector('#more_graphics_p').addEventListener('click', scrollToMore);
+
 postApo.addEventListener('click', scrollToMore);
 winePage.addEventListener('click', scrollToMore);
 // messengerIcon.addEventListener('mouseover', function () {
@@ -73,7 +121,26 @@ winePage.addEventListener('click', scrollToMore);
 // mailIcon.addEventListener('mouseleave', function () {
 //     mailIcon.classList.remove('animate__headShake');
 // });
+let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "http://all4desktop.com/data_images/original/4189613-digital-abstract-eye-2.jpg"];
+let webSlideContent = ['xd/mob/Konfigurator.png', 'xd/mob/wine2.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png'];
+function fillDesignSlider() {
+    let slidesDesign = document.querySelectorAll('.swiper_slide_design');
+    for (let i = 0; i < designSlideContent.length; i++) {
+        const designImg = designSlideContent[i];
+        slidesDesign[i].style.backgroundImage = 'url(' + designImg + ')';
 
+    }
+}
+function fillWebSlider() {
+    let slidesWeb = document.querySelectorAll('.swiper_slide_web');
+    for (let i = 0; i < webSlideContent.length; i++) {
+        const webImg = webSlideContent[i];
+        slidesWeb[i].style.backgroundImage = 'url(' + webImg + ')';
+
+    }
+}
+fillDesignSlider();
+fillWebSlider();
 let socialIcons = document.querySelectorAll('.social_icons_img');
 // headShakeOFF = function (icon) {
 //     icon.classList.remove('animate__headShake');
@@ -142,23 +209,39 @@ aboutHeadersSlide = function () {
 let article = document.querySelectorAll('article');
 let tittles = document.querySelectorAll('.tittle');
 let styleTittles = document.querySelectorAll('.style_tittle');
+
+// function slideSocialIcons() {
+//     for (let i = 0; i < styleTittles.length; i++) {
+//         // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
+//         if (styleTittles[i].getBoundingClientRect().top < screenHeight) {
+//             tittles[i].style.visibility = 'visible';
+//             styleTittles[i].style.visibility = 'visible';
+//             styleTittles[i].classList.add('animate__animated', 'animate__bounceInLeft');
+
+//         }
+//     }
+
+// }
+
+
 function tittleSlide() {
     let topHeight = window.pageYOffset + window.innerHeight;
     for (let i = 0; i < styleTittles.length; i++) {
         // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
         if (styleTittles[i].getBoundingClientRect().top < screenHeight) {
             styleTittles[i].style.visibility = 'visible';
+            tittles[i].style.visibility = 'visible';
             styleTittles[i].classList.add('animate__animated', 'animate__bounceInLeft');
 
         }
     }
-    for (let i = 0; i < tittles.length; i++) {
-        // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
-        if (tittles[i].getBoundingClientRect().top < screenHeight) {
-            tittles[i].style.visibility = 'visible';
-            tittles[i].classList.add('animate__bounceInLeft');
-        }
-    }
+    // for (let i = 0; i < tittles.length; i++) {
+    //     // console.log(tittles[i].getBoundingClientRect().top, topHeight, tittles[i].classList);
+    //     if (tittles[i].getBoundingClientRect().top < screenHeight) {
+    //         tittles[i].style.visibility = 'visible';
+    //         tittles[i].classList.add('animate__bounceInLeft');
+    //     }
+    // }
 }
 let describeParas = document.querySelectorAll('.about_describe_paras');
 describeParasSlide = function () {
@@ -176,6 +259,30 @@ aboutWorksBgSlide = function () {
         aboutWorksBg.style.transform = 'translateX(0) translateY(0)';
     }
 };
+let contactBg = document.querySelector('.contact_bg');
+let contact = document.querySelector('.kontakt');
+contactSlide = function () {
+    if (contact.getBoundingClientRect().top < 200) {
+        contactBg.style.transform = 'translateX(0) translateY(0)';
+    }
+};
+
+window.addEventListener('scroll', function () {
+    console.log(contact.getBoundingClientRect().top);
+});
+
+
+slideContactSocialIcons = function () {
+    if (contact.getBoundingClientRect().top < screenHeight) {
+        setTimeout(() => { contactMessengerIcon.classList.add('animate__bounceInLeft'); contactMessengerIcon.style.visibility = 'visible'; }, 500);
+        setTimeout(() => { contactGithubIcon.classList.add('animate__bounceInLeft'); contactGithubIcon.style.visibility = 'visible'; }, 600);
+        setTimeout(() => { contactFbIcon.classList.add('animate__bounceInLeft'); contactFbIcon.style.visibility = 'visible'; }, 700);
+        setTimeout(() => { contactMessengerIcon.classList.remove('animate__bounceInLeft'); }, 2000);
+        setTimeout(() => { contactGithubIcon.classList.remove('animate__bounceInLeft'); }, 2100);
+        setTimeout(() => { contactFbIcon.classList.remove('animate__bounceInLeft'); }, 2200);
+    }
+};
+slideContactSocialIcons();
 let aboutWorksIconsWraper = document.querySelectorAll('.about_works_icons_wraper');
 function showIcons() {
     for (let i = 0; i < aboutWorksIconsWraper.length; i++) {
@@ -222,15 +329,38 @@ function showExamplePhoto() {
         }
     }
 }
-window.addEventListener('scroll', showIcons);
-window.addEventListener('scroll', showSwipers);
-window.addEventListener('scroll', techSkillsFlip);
-window.addEventListener('scroll', portfolioDisplay);
-window.addEventListener('scroll', tittleSlide);
-window.addEventListener('scroll', aboutWorksBgSlide);
-window.addEventListener('scroll', showExamplePhoto);
-window.addEventListener('scroll', describeParasSlide);
-window.addEventListener('scroll', aboutHeadersSlide);
+function load() {
+    showIcons();
+    showSwipers();
+    techSkillsFlip();
+    portfolioDisplay();
+    tittleSlide();
+    aboutWorksBgSlide();
+    showExamplePhoto();
+    describeParasSlide();
+    aboutHeadersSlide();
+    contactSlide();
+
+}
+window.addEventListener('scroll', load);
+window.addEventListener('load', load);
+// window.addEventListener('scroll', showSwipers);
+// window.addEventListener('scroll', techSkillsFlip);
+// window.addEventListener('scroll', portfolioDisplay);
+// window.addEventListener('scroll', tittleSlide);
+// window.addEventListener('scroll', aboutWorksBgSlide);
+// window.addEventListener('scroll', showExamplePhoto);
+// window.addEventListener('scroll', describeParasSlide);
+// window.addEventListener('scroll', aboutHeadersSlide);
+
+let email = document.querySelector('.e-mail');
+function showEmail() {
+    if (email.getBoundingClientRect().top < screenHeight) {
+        email.classList.add('animate__zoomIn');
+        email.style.visibility = 'visible';
+    }
+}
+showEmail();
 let orderButton = document.querySelectorAll('.order_button');
 setTimeout(() => {
     for (let i = 0; i < orderButton.length; i++) {
@@ -354,7 +484,7 @@ setTimeout(() => {
 }, 700);
 hi.addEventListener('mouseover', sayHi);
 window.addEventListener('click', function () {
-    console.log(event.target, event.target !== menu);
+    console.log(event.target);
 });
 hi.addEventListener('mouseleave', function () {
     hiWraper.classList.add('animate__zoomOut');

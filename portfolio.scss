@@ -4,6 +4,7 @@ $light_orange: #FFD400;
 $graphite: rgb(36, 36, 36);
 
 body{
+    // overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: Segoe UI;
@@ -15,6 +16,9 @@ nav{
     position: absolute;
     top: 1rem;
     left: 1rem;
+}
+span{
+    white-space: nowrap;
 }
 .blur_container{
     transition: .5s;
@@ -253,15 +257,13 @@ border-radius: 12px;
 border: 0;
 font-weight: 900;
 font-size: 1rem;
+visibility: hidden;
 }
 .order_button:hover{
     cursor: pointer;
 }
 .order_button:focus{
     transform: scale(.9);
-}
-#orderButton{
-    visibility: hidden;
 }
 .button_arrow, .down_arrow{
     width: 16px;
@@ -409,7 +411,7 @@ flex-direction: column;
 align-items: center;
 color: white;
 animation-duration: .9s;
-animation-delay: .5s;
+animation-delay: .3s;
 visibility: hidden;
 }
 .about_works_icons_background{
@@ -451,7 +453,7 @@ font-weight: 200;
 }
 .portfolio_header_tulip{
     height: 50px;
-    margin-top: .5rem;
+    margin-top: .2rem;
 }
 :root {
     --swiper-theme-color: $orange !important;
@@ -459,7 +461,7 @@ font-weight: 200;
 .swiper-button-next, .swiper-button-prev{
     font-weight: 900 !important;
     height: calc(var(--swiper-navigation-size)/ 44 * 27) !important;
-    background-color: rgba(10, 10, 10, 0.7) !important;
+    // background-color: rgba(10, 10, 10, 0.7) !important;
     padding: 1.5rem;
     margin-top: 5rem !important;
     border-radius: 50%;
@@ -476,9 +478,9 @@ font-weight: 200;
     overflow-y: visible !important;
     overflow-x: hidden !important;
   }
-.swiper_low_brightness:hover .swiper-slide-img{
-    filter: brightness(20%);
-}
+// .swiper_low_brightness:hover .swiper-slide-img{
+//     filter: brightness(20%);
+// }
 .swiper-wrapper{
     // height: 15rem !important;
     // overflow: hidden !important;
@@ -486,8 +488,8 @@ font-weight: 200;
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
-
+    background-size: cover;
+    height: 15rem !important;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -503,13 +505,13 @@ font-weight: 200;
     align-items: start;
   }
 
-  .swiper-slide-img {
-    display: block;
-    width: 100%;
-    height: 15rem !important;
-    object-fit: cover;
-    object-position: top;
-  }
+//   .swiper-slide-img {
+//     display: block;
+//     width: 100%;
+//     height: 15rem !important;
+//     object-fit: cover;
+//     object-position: top;
+//   }
   .swiper-button-prev, .swiper-button-next{
       top: 0 !important;
   }
@@ -521,6 +523,19 @@ font-weight: 200;
   }
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
     bottom: 0 !important;
+}
+.swiper-pagination{
+    display: flex;
+    justify-content: center;
+    padding: .3rem;
+    background-color: rgb(26, 26, 26);
+}
+.swiper-pagination-bullet{
+    background: rgb(125, 125, 125) !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+    background: $orange !important;
 }
 .portfolio .example_photo{
     margin: 3rem 0;
@@ -569,14 +584,19 @@ font-weight: 200;
 .tech_skill_icon{
     height: 40px;
 }
+.contact_bg{
+    // position: absolute;
+    // left: 0;
+    transform: translate(100vw, -50vh);
+    background-image: url(xd/mob/black3Bg.png);
+    background-size: cover;
+    transition: .5s;
+    // animation-delay: .3s;
+}
 .kontakt{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: 0;
-    background-image: url(xd/mob/black3Bg.png);
-    background-size: cover;
     width: 100%;
 }
 .kontakt .blackBg{
@@ -585,10 +605,18 @@ font-weight: 200;
 .kontakt .style_tittle{
     margin-top: 4rem;
 }
+.e-mail{
+    visibility: hidden;
+    transition: .5s;
+    animation-delay: .2s;
+}
 .kontakt .tittle, .e-mail{
     color: white;
 position: relative;
 z-index: 5;
+}
+#contactMessengerIcon, #contactGithubIcon, #contactFbIcon{
+    visibility: hidden;
 }
 .social_icons{
     display: flex;
