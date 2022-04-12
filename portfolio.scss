@@ -607,8 +607,8 @@ font-weight: 200;
 }
 .e-mail{
     visibility: hidden;
-    transition: .5s;
-    animation-delay: .2s;
+    transition: .5s !important;
+    animation-delay: .2s !important;
 }
 .kontakt .tittle, .e-mail{
     color: white;

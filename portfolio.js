@@ -27,7 +27,7 @@ let toparrow = document.querySelector('.toparrow');
 let more = document.querySelectorAll('.example_photo_more');
 let postApo = document.querySelector('#post_apo');
 let winePage = document.querySelector('#wine_page');
-let screenHeight = window.innerHeight - 300;
+let screenHeight = window.innerHeight;
 let swiperButtons = document.querySelector('.swiper-button-prev', '.swiper-button-next');
 let prev = document.querySelector('.swiper-button-prev');
 let webImg = document.querySelectorAll('.swiper_slide_web');
@@ -277,12 +277,12 @@ slideContactSocialIcons = function () {
         setTimeout(() => { contactMessengerIcon.classList.add('animate__bounceInLeft'); contactMessengerIcon.style.visibility = 'visible'; }, 500);
         setTimeout(() => { contactGithubIcon.classList.add('animate__bounceInLeft'); contactGithubIcon.style.visibility = 'visible'; }, 600);
         setTimeout(() => { contactFbIcon.classList.add('animate__bounceInLeft'); contactFbIcon.style.visibility = 'visible'; }, 700);
-        setTimeout(() => { contactMessengerIcon.classList.remove('animate__bounceInLeft'); }, 2000);
-        setTimeout(() => { contactGithubIcon.classList.remove('animate__bounceInLeft'); }, 2100);
-        setTimeout(() => { contactFbIcon.classList.remove('animate__bounceInLeft'); }, 2200);
+
+        // setTimeout(() => { contactMessengerIcon.classList.remove('animate__bounceInLeft'); }, 2000);
+        // setTimeout(() => { contactGithubIcon.classList.remove('animate__bounceInLeft'); }, 2100);
+        // setTimeout(() => { contactFbIcon.classList.remove('animate__bounceInLeft'); }, 2200);
     }
 };
-slideContactSocialIcons();
 let aboutWorksIconsWraper = document.querySelectorAll('.about_works_icons_wraper');
 function showIcons() {
     for (let i = 0; i < aboutWorksIconsWraper.length; i++) {
@@ -295,12 +295,12 @@ function showIcons() {
 }
 function techSkillsFlip() {
     let techSkills = document.querySelectorAll('.tech_skill');
-    let animationDelay = 0.5;
+    let animationDelay = 0.2;
     for (let i = 0; i < techSkills.length; i++) {
         const techSkill = techSkills[i];
         if (techSkill.getBoundingClientRect().top < screenHeight) {
             techSkill.style.visibility = 'visible';
-            animationDelay = animationDelay + 0.2;
+            animationDelay = animationDelay + 0.13;
             techSkill.style.animationDelay = animationDelay + 's';
             techSkill.classList.add('animate__animated', 'animate__flipInY');
         }
@@ -340,6 +340,9 @@ function load() {
     describeParasSlide();
     aboutHeadersSlide();
     contactSlide();
+    slideContactSocialIcons();
+    showEmail();
+
 
 }
 window.addEventListener('scroll', load);
@@ -356,11 +359,12 @@ window.addEventListener('load', load);
 let email = document.querySelector('.e-mail');
 function showEmail() {
     if (email.getBoundingClientRect().top < screenHeight) {
-        email.classList.add('animate__zoomIn');
-        email.style.visibility = 'visible';
+        email.classList.add('animate__bounce');
+        setTimeout(() => {
+            email.style.visibility = 'visible';
+        }, 500);
     }
 }
-showEmail();
 let orderButton = document.querySelectorAll('.order_button');
 setTimeout(() => {
     for (let i = 0; i < orderButton.length; i++) {
