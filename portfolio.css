@@ -156,8 +156,8 @@ span {
   z-index: 3;
   background-image: url(xd/mob/toToparrow.png);
   background-size: cover;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   opacity: .85;
   visibility: hidden;
   animation-delay: .7s;
