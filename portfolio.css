@@ -154,7 +154,7 @@ span {
   bottom: .7rem;
   right: .7rem;
   z-index: 3;
-  background-image: url(xd/mob/toparrow.png);
+  background-image: url(xd/mob/toToparrow.png);
   background-size: cover;
   width: 4rem;
   height: 4rem;
@@ -194,7 +194,7 @@ span {
 }
 
 .home_avatar_img img {
-  width: 250px;
+  width: 24rem;
 }
 
 .home_hand_img img {
@@ -771,5 +771,23 @@ span {
 @media (max-height: 850px) {
   .orangeBg, .blackBg {
     height: 110vh;
+  }
+}
+
+@media (min-width: 600px) {
+  .about_works_bg {
+    height: 55rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .home_avatar img {
+    width: 27rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .about_works_bg {
+    height: 60rem;
   }
 }
