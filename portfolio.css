@@ -416,6 +416,8 @@ span {
 
 .about_works {
   width: 100%;
+  padding-bottom: 5rem;
+  background-image: url("xd/mob/black2Bg.png");
 }
 
 .about_works .style_tittle::after {

@@ -253,7 +253,7 @@ describeParasSlide = function () {
         }
     }
 };
-let aboutWorksBg = document.querySelector('.about_works_bg');
+let aboutWorksBg = document.querySelector('.about_works');
 aboutWorksBgSlide = function () {
     if (aboutWorksBg.getBoundingClientRect().top < 200) {
         aboutWorksBg.style.transform = 'translateX(0) translateY(0)';
