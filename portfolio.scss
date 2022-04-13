@@ -139,8 +139,8 @@ height: 95vh;
 }
 .toparrow{
     position: fixed;
-    bottom: .7rem;
-    right: .7rem;
+    bottom: 2rem;
+    right: 1rem;
     z-index: 3;
     background-image: url(xd/mob/toToparrow.png);
     background-size: cover;
@@ -587,10 +587,6 @@ font-weight: 200;
 .contact_bg{
     // position: absolute;
     // left: 0;
-    transform: translate(100vw, -50vh);
-    background-image: url(xd/mob/black3Bg.png);
-    background-size: cover;
-    transition: .5s;
     // animation-delay: .3s;
 }
 .kontakt{
@@ -598,6 +594,10 @@ font-weight: 200;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    transform: translate(100vw, -50vh);
+    background-image: url(xd/mob/black3Bg.png);
+    background-size: cover;
+    transition: .5s;
 }
 .kontakt .blackBg{
    margin-top: -36rem;

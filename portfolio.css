@@ -151,8 +151,8 @@ span {
 
 .toparrow {
   position: fixed;
-  bottom: .7rem;
-  right: .7rem;
+  bottom: 2rem;
+  right: 1rem;
   z-index: 3;
   background-image: url(xd/mob/toToparrow.png);
   background-size: cover;
@@ -634,18 +634,15 @@ span {
   height: 40px;
 }
 
-.contact_bg {
-  transform: translate(100vw, -50vh);
-  background-image: url(xd/mob/black3Bg.png);
-  background-size: cover;
-  transition: .5s;
-}
-
 .kontakt {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  transform: translate(100vw, -50vh);
+  background-image: url(xd/mob/black3Bg.png);
+  background-size: cover;
+  transition: .5s;
 }
 
 .kontakt .blackBg {

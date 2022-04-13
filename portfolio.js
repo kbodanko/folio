@@ -262,8 +262,8 @@ aboutWorksBgSlide = function () {
 let contactBg = document.querySelector('.contact_bg');
 let contact = document.querySelector('.kontakt');
 contactSlide = function () {
-    if (contact.getBoundingClientRect().top < 200) {
-        contactBg.style.transform = 'translateX(0) translateY(0)';
+    if (contact.getBoundingClientRect().top < 300) {
+        contact.style.transform = 'translateX(0) translateY(0)';
     }
 };
 
