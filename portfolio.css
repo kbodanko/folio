@@ -198,9 +198,9 @@ span {
 }
 
 .home_hand_img img {
-  transform: translateX(-2.5rem) translateY(0.3rem);
   animation-duration: .6s;
   animation-iteration-count: 4;
+  width: 7rem;
 }
 
 .home_hand_img {
@@ -722,16 +722,16 @@ span {
 
 @keyframes wagging {
   0% {
-    -webkit-transform: rotate(0) translateX(-2.5rem) translateY(0.3rem);
-    transform: rotate(0) translateX(-2.5rem) translateY(0.3rem);
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
   }
   50% {
-    -webkit-transform: rotate(7deg) translateX(-2.5rem) translateY(0.3rem);
-    transform: rotate(7deg) translateX(-2.5rem) translateY(0.3rem);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   100% {
-    -webkit-transform: rotate(-7deg) translateX(-2.5rem) translateY(0.3rem);
-    transform: rotate(-7deg) translateX(-2.5rem) translateY(0.3rem);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
 }
 
@@ -780,8 +780,11 @@ span {
 }
 
 @media (min-width: 550px) {
-  .home_avatar img {
+  .home_avatar_img img {
     width: 27rem;
+  }
+  .home_hand_img img {
+    width: 8rem;
   }
 }
 
