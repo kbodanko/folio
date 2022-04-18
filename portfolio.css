@@ -193,7 +193,7 @@ span {
   visibility: hidden;
 }
 
-.home_avatar_img img {
+.home_avatar_img img, .home_hi_img img {
   width: 24rem;
 }
 
@@ -402,6 +402,7 @@ span {
 
 .about_describe_paras {
   visibility: hidden;
+  animation-delay: .1s;
 }
 
 .about_header {

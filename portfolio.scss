@@ -179,7 +179,7 @@ height: 95vh;
     right: 0;
     visibility: hidden;
 }
-.home_avatar_img img{
+.home_avatar_img img, .home_hi_img img{
     width: 24rem;
 }
 .home_hand_img img{
@@ -365,6 +365,7 @@ cursor: pointer;
 }
 .about_describe_paras{
     visibility: hidden;
+    animation-delay: .1s;
 }
 .about_header{
     font-size: 2rem;

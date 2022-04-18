@@ -301,6 +301,7 @@ function techSkillsFlip() {
         if (techSkill.getBoundingClientRect().top < screenHeight) {
             techSkill.style.visibility = 'visible';
             animationDelay = animationDelay + 0.13;
+            animationDelay = animationDelay + 0.13;
             techSkill.style.animationDelay = animationDelay + 's';
             techSkill.classList.add('animate__animated', 'animate__flipInY');
         }
