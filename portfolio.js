@@ -264,6 +264,12 @@ let contact = document.querySelector('.kontakt');
 contactSlide = function () {
     if (contact.getBoundingClientRect().bottom < 1350) {
         contact.style.transform = 'translateX(0) translateY(0)';
+        // setTimeout(() => {
+        // }, 200);
+        tittles[6].classList.add('animate__bounceInLeft');
+        setTimeout(() => {
+            tittles[6].style.visibility = 'visible';
+        }, 220);
     }
 };
 
@@ -362,7 +368,9 @@ window.addEventListener('load', load);
 let email = document.querySelector('.e-mail');
 function showEmail() {
     if (email.getBoundingClientRect().top < screenHeight) {
-        email.classList.add('animate__bounce');
+        setTimeout(() => {
+            email.classList.add('animate__fadeIn');
+        }, 490);
         setTimeout(() => {
             email.style.visibility = 'visible';
         }, 500);
@@ -371,7 +379,9 @@ function showEmail() {
 let orderButton = document.querySelectorAll('.order_button');
 setTimeout(() => {
     for (let i = 0; i < orderButton.length; i++) {
-        orderButton[i].style.visibility = 'visible';
+        setTimeout(() => {
+            orderButton[i].style.visibility = 'visible';
+        }, 500);
         orderButton[i].classList.add('animate__rubberBand');
 
     }
@@ -521,6 +531,11 @@ function showSwipers() {
         }
     }
 }
+window.addEventListener('scroll', function () {
+    if (isMenuOpen) {
+        window.scrollTo(0, 0);
+    }
+});
 function openCloseMenu() {
     console.log(isMenuOpen);
     // console.log(event.target !== menu);

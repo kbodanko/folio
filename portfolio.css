@@ -49,10 +49,6 @@ span {
   margin-top: .5rem;
 }
 
-#messengerIcon, #githubIcon, #mailIcon {
-  visibility: hidden;
-}
-
 .home .social_icons_img {
   height: 25px;
   width: 25px;
@@ -61,6 +57,10 @@ span {
 
 .home .social_icons_img:hover {
   cursor: pointer;
+}
+
+#messengerIcon, #githubIcon, #mailIcon {
+  visibility: hidden;
 }
 
 .home_hamburger_menu {
@@ -75,15 +75,6 @@ span {
 
 .home_hamburger_menu:hover > .home_hamburger_menu_img {
   transform: scale(1.1);
-}
-
-.home_hamburger_menu_img {
-  margin-bottom: .3rem;
-  visibility: hidden;
-}
-
-#line3 {
-  width: 60%;
 }
 
 .home_menu {
@@ -101,6 +92,15 @@ span {
   transition: .5s;
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.home_hamburger_menu_img {
+  margin-bottom: .3rem;
+  visibility: hidden;
+}
+
+#line3 {
+  width: 60%;
 }
 
 .home_menu_close {
@@ -210,7 +210,7 @@ span {
 .home_description {
   color: white;
   position: absolute;
-  top: 20rem;
+  top: 22rem;
   left: 2rem;
   z-index: 2;
   margin-top: 2rem;
@@ -219,7 +219,7 @@ span {
 .home_description_name {
   font-size: .9rem;
   font-weight: 500;
-  margin: .2rem;
+  margin: 0 .2rem;
   border-right: 2px solid rgba(255, 255, 255, 0);
   white-space: nowrap;
   overflow: hidden;
@@ -233,7 +233,7 @@ span {
   font-weight: 900;
   margin: 0;
   margin-top: 0px;
-  margin-top: -1.5rem;
+  margin-top: -2rem;
   text-shadow: 0 0 4px #242424;
   visibility: hidden;
   animation-duration: .4s;
@@ -275,6 +275,8 @@ span {
   font-weight: 900;
   font-size: 1rem;
   visibility: hidden;
+  transition: 2s;
+  animation-delay: .5s;
 }
 
 .order_button:hover {
@@ -417,23 +419,27 @@ span {
 
 .about_works {
   width: 100%;
+  margin-top: 5rem;
   padding-bottom: 5rem;
   background-image: url("xd/mob/black2Bg.png");
+  background-size: cover;
+  transform: translateX(-40rem) translateY(-20rem);
+  transition: .5s;
 }
 
 .about_works .style_tittle::after {
-  margin-top: 2rem;
-  margin-bottom: -2rem;
+  margin-top: -2rem;
 }
 
 .about_works .tittle {
-  margin-bottom: -2rem;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
 }
 
 .about_works_bg {
   position: absolute;
   z-index: -1;
+  background-image: url(xd/mob/black2Bg.png);
   background-size: cover;
   width: 100%;
   height: 65rem;
@@ -488,7 +494,7 @@ span {
 }
 
 .portfolio {
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
 .portfolio_header {
@@ -770,7 +776,7 @@ span {
 
 @media (max-height: 850px) {
   .orangeBg, .blackBg {
-    height: 110vh;
+    height: 120vh;
   }
 }
 

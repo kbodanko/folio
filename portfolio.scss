@@ -49,9 +49,6 @@ height: 95vh;
     z-index: 3;  
     margin-top: .5rem; 
 }
-#messengerIcon, #githubIcon, #mailIcon{
-    visibility: hidden;
-}
 .home .social_icons_img{
     height: 25px;
     width: 25px;
@@ -60,23 +57,20 @@ height: 95vh;
 .home .social_icons_img:hover{
     cursor: pointer;
 }
+#messengerIcon, #githubIcon, #mailIcon{
+    visibility: hidden;
+}
 .home_hamburger_menu{
     display: flex;
     flex-direction: column;
     z-index: 3;
-}
-.home_hamburger_menu:hover{
-    cursor: pointer;
-}
-.home_hamburger_menu:hover > .home_hamburger_menu_img{
-    transform: scale(1.1);
-}
-.home_hamburger_menu_img{
-    margin-bottom: .3rem;
-    visibility: hidden;
-}
-#line3{
-    width: 60%;
+
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover> .home_hamburger_menu_img{
+        transform: scale(1.1);
+    }
 }
 .home_menu{
     // visibility: hidden;
@@ -97,23 +91,31 @@ height: 95vh;
     font-size: 1.2rem;
 }
 // .home_menu p:last-child{
-//     padding-bottom: 3rem;
-// }
-.home_menu_close{
-    display: flex;
-    justify-content: end;
-    width: 100%;
-}
-.home_menu_close_img{
-    width: 25px;
-    margin: 1.2rem;
-}
-.home_menu_close:hover{
-    cursor: pointer;
-}
-.home_menu_close_img:hover{
-    transform: scale(1.1);
-}
+    //     padding-bottom: 3rem;
+    // }
+    .home_hamburger_menu_img{
+        margin-bottom: .3rem;
+        visibility: hidden;
+    }
+    #line3{
+        width: 60%;
+    }
+    .home_menu_close{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+
+        &_img{
+            width: 25px;
+            margin: 1.2rem;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &_img:hover{
+            transform: scale(1.1);
+        }
+    }
 .home_menu_paras{
     display: flex;
     flex-direction: column;
@@ -129,13 +131,14 @@ height: 95vh;
     width: 100%;
     height: 15%;
     transition: .2s;
-}
-.home_menu_p:hover{
-    background-color: rgba(255, 166, 0, 0.9);
-    cursor: pointer;
-}
-.home_menu_p:hover .home_menu_p_content{
-    transform: scale(1.1);
+
+    &:hover{
+        background-color: rgba(255, 166, 0, 0.9);
+        cursor: pointer;
+    }
+    &:hover .home_menu_p_content{
+        transform: scale(1.1);
+    }
 }
 .toparrow{
     position: fixed;
@@ -149,14 +152,11 @@ height: 95vh;
     opacity: .85;
     visibility: hidden;
     animation-delay: .7s;
-}
-.toparrow:hover{
-    opacity: 1;
-    cursor: pointer;
-}
-.pop_up_wraper{
-    
-}
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+} 
 .pop_up{
     position: fixed;
     top: 0;
@@ -196,7 +196,7 @@ height: 95vh;
 .home_description{
     color: white;
 position: absolute;
-top: 20rem;
+top: 22rem;
 left: 2rem;
 z-index: 2;
 margin-top: 2rem;
@@ -205,7 +205,7 @@ margin-top: 2rem;
 .home_description_name{
     font-size: .9rem;
     font-weight: 500;
-    margin: .2rem;
+    margin: 0 .2rem;
     border-right: 2px solid rgba(255, 255, 255, 0);
     white-space: nowrap;
     overflow: hidden;
@@ -220,7 +220,7 @@ font-variant: small-caps;
 font-weight: 900;
 margin: 0;
   margin-top: 0px;
-margin-top: -1.5rem;  
+margin-top: -2rem;  
     text-shadow: 0 0 4px $graphite;
     visibility: hidden;
     animation-duration: .4s;
@@ -259,6 +259,8 @@ border: 0;
 font-weight: 900;
 font-size: 1rem;
 visibility: hidden;
+transition: 2s;
+animation-delay: .5s;
 }
 .order_button:hover{
     cursor: pointer;
@@ -381,21 +383,25 @@ visibility: hidden;
 }
 .about_works{
     width: 100%;
+    margin-top: 5rem;
     padding-bottom: 5rem;
     background-image: url('xd/mob/black2Bg.png');
+    background-size: cover;
+    transform: translateX(-40rem) translateY(-20rem);
+    transition: .5s;
 }
 .about_works .style_tittle::after{
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    margin-top: -2rem;
+    // margin-bottom: -2rem;
 }
 .about_works .tittle{
-    margin-bottom: -2rem;
-margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
 }
 .about_works_bg{
     position: absolute;
     z-index: -1;
-    // background-image: url(xd/mob/black2Bg.png);
+    background-image: url(xd/mob/black2Bg.png);
 background-size: cover;
     width: 100%;
 height: 65rem;
@@ -444,7 +450,7 @@ width: 60px;
     font-size: .9rem;
 }
 .portfolio{
-    margin-top: 10rem;
+    margin-top: 3rem;
 }
 .portfolio_header{
     display: flex;
@@ -703,7 +709,7 @@ visibility: visible;
 
 @media (max-height: 850px){
     .orangeBg, .blackBg{
-        height: 110vh;
+        height: 120vh;
     }
 }
 @media(min-width: 600px){
