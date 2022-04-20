@@ -836,7 +836,7 @@ span {
   }
 }
 
-@media (min-height: 800px) {
+@media (min-width: 800px) {
   .home_description_frontend {
     font-size: 6rem;
     margin-top: -3.5rem;
