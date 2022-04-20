@@ -33,6 +33,35 @@ let prev = document.querySelector('.swiper-button-prev');
 let webImg = document.querySelectorAll('.swiper_slide_web');
 let designImg = document.querySelectorAll('.swiper_slide_design');
 
+function setNameAnimation() {
+
+    // const nameSpinning = [
+    //     { width: '0' },
+    //     { width: '125px' }
+    // ];
+    // const nameSpinningWide = [
+    //     { width: '0' },
+    //     { width: '205px' }
+    // ];
+
+    // const nameTiming = {
+    //     duration: 2000,
+    //     iterations: 1,
+    // };
+
+    const name = document.querySelector(".home_description_name");
+
+    if (window.innerWidth < 800) {
+        name.classList.add('home_description_name_under800');
+        console.log('<800');
+    } else {
+        name.classList.add('home_description_name_over800');
+    }
+
+}
+
+setNameAnimation();
+
 prev.addEventListener('mouseover', function () {
     console.log('light');
     for (let i = 0; i < webImg.length; i++) {
