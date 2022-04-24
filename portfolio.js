@@ -62,50 +62,50 @@ function setNameAnimation() {
 
 setNameAnimation();
 
-prev.addEventListener('mouseover', function () {
-    console.log('light');
-    for (let i = 0; i < webImg.length; i++) {
-        console.log(i);
-        webImg[i].style.filter = 'brightness(100%)';
-        console.log(webImg[i].style.filter);
-    }
-});
-prev.addEventListener('mouseleave', function () {
-    console.log('light');
-    for (let i = 0; i < webImg.length; i++) {
-        console.log(i);
-        webImg[i].style.filter = 'brightness(20%)';
-        console.log(webImg[i].style.filter);
-    }
-});
-for (let i = 0; i < designImg.length; i++) {
-    designImg[i].addEventListener('mouseleave', function () {
-        designImg[i].style.filter = 'brightness(100%)';
-    });
-}
-for (let i = 0; i < designImg.length; i++) {
-    designImg[i].addEventListener('mouseover', function () {
-        designImg[i].style.filter = 'brightness(20%)';
-    });
-}
-prev.addEventListener('mouseleave', function () {
-    console.log('light');
-    for (let i = 0; i < designImg.length; i++) {
-        console.log(i);
-        designImg[i].style.filter = 'brightness(20%)';
-        console.log(designImg[i].style.filter);
-    }
-});
-for (let i = 0; i < designImg.length; i++) {
-    designImg[i].addEventListener('mouseleave', function () {
-        designImg[i].style.filter = 'brightness(100%)';
-    });
-}
-for (let i = 0; i < designImg.length; i++) {
-    designImg[i].addEventListener('mouseover', function () {
-        designImg[i].style.filter = 'brightness(20%)';
-    });
-}
+// prev.addEventListener('mouseover', function () {
+//     console.log('light');
+//     for (let i = 0; i < webImg.length; i++) {
+//         console.log(i);
+//         webImg[i].style.filter = 'brightness(100%)';
+//         console.log(webImg[i].style.filter);
+//     }
+// });
+// prev.addEventListener('mouseleave', function () {
+//     console.log('light');
+//     for (let i = 0; i < webImg.length; i++) {
+//         console.log(i);
+//         webImg[i].style.filter = 'brightness(20%)';
+//         console.log(webImg[i].style.filter);
+//     }
+// });
+// for (let i = 0; i < designImg.length; i++) {
+//     designImg[i].addEventListener('mouseleave', function () {
+//         designImg[i].style.filter = 'brightness(100%)';
+//     });
+// }
+// for (let i = 0; i < designImg.length; i++) {
+//     designImg[i].addEventListener('mouseover', function () {
+//         designImg[i].style.filter = 'brightness(20%)';
+//     });
+// }
+// prev.addEventListener('mouseleave', function () {
+//     console.log('light');
+//     for (let i = 0; i < designImg.length; i++) {
+//         console.log(i);
+//         designImg[i].style.filter = 'brightness(20%)';
+//         console.log(designImg[i].style.filter);
+//     }
+// });
+// for (let i = 0; i < designImg.length; i++) {
+//     designImg[i].addEventListener('mouseleave', function () {
+//         designImg[i].style.filter = 'brightness(100%)';
+//     });
+// }
+// for (let i = 0; i < designImg.length; i++) {
+//     designImg[i].addEventListener('mouseover', function () {
+//         designImg[i].style.filter = 'brightness(20%)';
+//     });
+// }
 
 
 
@@ -157,6 +157,9 @@ function fillDesignSlider() {
     for (let i = 0; i < designSlideContent.length; i++) {
         const designImg = designSlideContent[i];
         slidesDesign[i].style.backgroundImage = 'url(' + designImg + ')';
+        slidesDesign[i].addEventListener('click', function () {
+            window.open(designSlideContent[i]);
+        })
 
     }
 }

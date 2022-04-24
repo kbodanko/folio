@@ -307,7 +307,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -5rem;
+  margin-top: -3rem;
   font-size: 1.5rem;
 }
 
@@ -527,6 +527,7 @@ span {
 
 :root {
   --swiper-theme-color: #ffae00 !important;
+  --swiper-navigation-size: 40px !important;
 }
 
 .swiper-button-next, .swiper-button-prev {
@@ -851,6 +852,9 @@ span {
   .home_hand_img img {
     width: 9rem;
   }
+  .home_description_about {
+    width: 50%;
+  }
 }
 
 @media (min-width: 700px) {
@@ -913,10 +917,6 @@ span {
   }
 }
 
-:root {
-  --swiper-navigation-size: 70px !important;
-}
-
 @media (min-width: 800px) {
   .home_description_frontend {
     font-size: 6rem;
@@ -967,11 +967,5 @@ span {
   }
   .swiper-button-next, .swiper-button-prev {
     margin-top: 17rem !important;
-  }
-}
-
-@media (max-width: 650px) {
-  .home_description_about {
-    width: 50%;
   }
 }
