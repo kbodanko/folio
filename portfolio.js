@@ -305,10 +305,6 @@ contactSlide = function () {
     }
 };
 
-window.addEventListener('scroll', function () {
-    console.log(contact.getBoundingClientRect().top);
-});
-
 
 slideContactSocialIcons = function () {
     if (contact.getBoundingClientRect().top < screenHeight) {
@@ -479,10 +475,15 @@ function moreGraphics() {
 
 }
 document.querySelector('.home_menu_paras').addEventListener('click', scrollToElement);
+document.querySelector('.home_menu_paras').addEventListener('keydown', function () {
+    if (event.keyCode == 13) { document.querySelector('.home_menu_paras').click(); }
+
+});
+
 function scrollToElement() {
 
     let scrollTarget = (event.target.id.length > 0 ? event.target.id : event.target.parentElement.id);
-    console.log(scrollTarget);
+    console.log(event.target, 'eventtrget', event.target.parentElement.id);
     let scrollTargetClass = '.' + scrollTarget;
     console.log(scrollTargetClass, typeof (scrollTargetClass));
     let currentScrollTargetClass = document.querySelector(scrollTargetClass);

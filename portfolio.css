@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -17,6 +21,10 @@ span {
   white-space: nowrap;
 }
 
+a {
+  transition: .5s;
+}
+
 .blur_container {
   transition: .5s;
 }
@@ -24,7 +32,7 @@ span {
 .orangeBg {
   position: absolute;
   z-index: 2;
-  transform: translateX(20rem) translateY(-20rem);
+  transform: translateX(20rem) translateY(-40rem);
   transition-duration: .5s;
   transition-delay: .5s;
   width: 100%;
@@ -82,13 +90,12 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  color: white;
+  color: #191919;
   position: absolute;
   top: -60rem;
   z-index: 4;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
   transition: .5s;
   font-weight: 600;
   font-size: 1.2rem;
@@ -433,7 +440,7 @@ span {
   padding-bottom: 5rem;
   background-image: url("xd/mob/Rectangle.png");
   background-size: cover;
-  transform: translateX(-40rem) translateY(-20rem);
+  transform: translateX(-45rem) translateY(-40rem);
   transition: 1s;
 }
 
@@ -601,6 +608,15 @@ span {
 
 .swiper-pagination-bullet-active {
   background: #ffae00 !important;
+}
+
+.swiper_slide_design, .swiper_slide_web {
+  transition: .5s ease !important;
+}
+
+.swiper_slide_design:hover, .swiper_slide_web:hover {
+  transform: scale(1.2) !important;
+  filter: brightness(30%);
 }
 
 .portfolio .example_photo {
@@ -967,5 +983,26 @@ span {
   }
   .swiper-button-next, .swiper-button-prev {
     margin-top: 17rem !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  .about_works {
+    padding-bottom: 10rem;
+  }
+  .about_works_icons_wraper {
+    margin: 0 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about_works {
+    padding-bottom: 15rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .about_works {
+    padding-bottom: 20rem;
   }
 }

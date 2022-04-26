@@ -3,6 +3,9 @@ $orange: rgb(255, 174, 0);
 $light_orange: #FFD400;
 $graphite: rgb(36, 36, 36);
 
+*{
+    scroll-behavior: smooth;
+}
 body{
     // overflow: hidden;
     margin: 0;
@@ -20,13 +23,16 @@ nav{
 span{
     white-space: nowrap;
 }
+a{
+    transition: .5s;
+}
 .blur_container{
     transition: .5s;
 }
 .orangeBg {
     position: absolute;
 z-index: 2;
-transform: translateX(20rem) translateY(-20rem);
+transform: translateX(20rem) translateY(-40rem);
 transition-duration: .5s;
   transition-delay: .5s;
 width: 100%;
@@ -78,14 +84,14 @@ height: 95vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    color: white;
+    color: #191919;
     position: absolute;
     top: -60rem;
     z-index: 4;
     // transform: translateY(-30rem);
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    // background-color: rgba(0, 0, 0, 0.75);
     transition: .5s;
     font-weight: 600;
     font-size: 1.2rem;
@@ -397,7 +403,7 @@ visibility: hidden;
     padding-bottom: 5rem;
     background-image: url('xd/mob/Rectangle.png');
     background-size: cover;
-    transform: translateX(-40rem) translateY(-20rem);
+    transform: translateX(-45rem) translateY(-40rem);
     transition: 1s;
 }
 .about_works .style_tittle::after{
@@ -560,6 +566,13 @@ font-weight: 200;
 }
 .swiper-pagination-bullet-active{
     background: $orange !important;
+}
+.swiper_slide_design, .swiper_slide_web{
+    transition: .5s ease !important;
+}
+.swiper_slide_design:hover, .swiper_slide_web:hover{
+    transform: scale(1.2) !important;
+    filter: brightness(30%);
 }
 .portfolio .example_photo{
     margin: 3rem 0;
@@ -902,6 +915,24 @@ visibility: visible;
 .swiper-button-next, .swiper-button-prev{
     margin-top: 17rem !important;
 }
+}
+@media (min-width: 1000px){
+    .about_works{
+        padding-bottom: 10rem;
+    }
+    .about_works_icons_wraper{
+        margin: 0 2rem;
+    }
+}
+@media (min-width: 1200px){
+    .about_works{
+        padding-bottom: 15rem;
+    }
+}
+@media (min-width: 1300px){
+    .about_works{
+        padding-bottom: 20rem;
+    }
 }
 // @media(max-width: 650px){
 //     .home_description_about{
