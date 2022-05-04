@@ -151,7 +151,8 @@ winePage.addEventListener('click', scrollToMore);
 //     mailIcon.classList.remove('animate__headShake');
 // });
 let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "http://all4desktop.com/data_images/original/4189613-digital-abstract-eye-2.jpg"];
-let webSlideContent = ['xd/mob/Konfigurator.png', 'xd/mob/wine2.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png'];
+let webSlideContent = ['xd/mob/wine2.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png',];
+let webSlideUrl = ['https://kbodanko.github.io/wine-page/', 'https://kbodanko.github.io/doc/', 'https://kbodanko.github.io/BigBangGame/', 'https://kbodanko.github.io/Layan_konfigurator/'];
 function fillDesignSlider() {
     let slidesDesign = document.querySelectorAll('.swiper_slide_design');
     for (let i = 0; i < designSlideContent.length; i++) {
@@ -159,7 +160,7 @@ function fillDesignSlider() {
         slidesDesign[i].style.backgroundImage = 'url(' + designImg + ')';
         slidesDesign[i].addEventListener('click', function () {
             window.open(designSlideContent[i]);
-        })
+        });
 
     }
 }
@@ -168,7 +169,9 @@ function fillWebSlider() {
     for (let i = 0; i < webSlideContent.length; i++) {
         const webImg = webSlideContent[i];
         slidesWeb[i].style.backgroundImage = 'url(' + webImg + ')';
-
+        slidesWeb[i].addEventListener('click', function () {
+            window.open(webSlideUrl[i]);
+        });
     }
 }
 fillDesignSlider();
@@ -573,7 +576,7 @@ function openCloseMenu() {
     console.log(isMenuOpen);
     // console.log(event.target !== menu);
     if (isMenuOpen) {
-        menu.style.top = '-60rem';
+        menu.style.top = '-100rem';
         focusBg();
         // console.log('close');
     } else {
@@ -589,7 +592,7 @@ closeMenu = function () {
     console.log('close');
     let container = document.querySelector('.blur_container');
     if (isMenuOpen & event.target !== menu & event.target !== hamburgerMenu) {
-        menu.style.top = '-60rem';
+        menu.style.top = '-100rem';
         container.style.filter = 'blur(0) brightness(100%)';
     }
     isMenuOpen = false;
