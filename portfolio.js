@@ -150,7 +150,7 @@ winePage.addEventListener('click', scrollToMore);
 // mailIcon.addEventListener('mouseleave', function () {
 //     mailIcon.classList.remove('animate__headShake');
 // });
-let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "xd/Group 12.png", "xd/beuty_trnsp"];
+let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "xd/Group 12.png", "xd/beuty_trnsp.png"];
 let webSlideContent = ['xd/mob/wine2.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png',];
 let webSlideUrl = ['https://kbodanko.github.io/wine-page/', 'https://kbodanko.github.io/doc/', 'https://kbodanko.github.io/BigBangGameVue/', 'https://kbodanko.github.io/Layan_konfigurator/'];
 function fillDesignSlider() {
