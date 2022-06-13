@@ -153,8 +153,8 @@ winePage.addEventListener('click', scrollToMore);
 let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "xd/Group12.png", "xd/beuty_trnsp.png"];
 let webSlideContent = ['xd/mob/Lovewines1.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png',];
 let webSlideUrl = ['https://kbodanko.github.io/wine-page/', 'https://kbodanko.github.io/doc/', 'https://kbodanko.github.io/BigBangGame/', 'https://kbodanko.github.io/Layan_konfigurator/'];
+let slidesDesign = document.querySelectorAll('.swiper_slide_design');
 function fillDesignSlider() {
-    let slidesDesign = document.querySelectorAll('.swiper_slide_design');
     for (let i = 0; i < designSlideContent.length; i++) {
         const designImg = designSlideContent[i];
         console.log(slidesDesign, slidesDesign[i]);
