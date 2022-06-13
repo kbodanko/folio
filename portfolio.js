@@ -156,7 +156,7 @@ let webSlideUrl = ['https://kbodanko.github.io/wine-page/', 'https://kbodanko.gi
 function fillDesignSlider() {
     let slidesDesign = document.querySelectorAll('.swiper_slide_design');
     for (let i = 0; i < designSlideContent.length; i++) {
-                const designImg = designSlideContent[i];
+                let designImg = designSlideContent[i];
                 console.log(slidesDesign, slidesDesign[i]);
         slidesDesign[i].style.backgroundImage = 'url(' + designImg + ')';
         slidesDesign[i].addEventListener('click', function () {
