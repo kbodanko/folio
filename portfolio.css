@@ -230,7 +230,7 @@ a {
 .home_description_name {
   font-size: .9rem;
   font-weight: 500;
-  margin: 0 .2rem;
+  margin: 0;
   border-right: 2px solid rgba(255, 255, 255, 0);
   white-space: nowrap;
   overflow: hidden;
@@ -245,6 +245,10 @@ a {
 .home_description_name_over800 {
   animation: typewriterWide 1s steps(17) 1s 1 normal both;
 }
+margin: 0;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+font-size: 2rem;
 
 .home_description_frontend {
   font-size: 3.7rem;
