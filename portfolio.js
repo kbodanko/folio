@@ -1,11 +1,11 @@
 let rootElement = document.documentElement;
-let messengerIcon = document.querySelector('#messengerIcon');
+// let messengerIcon = document.querySelector('#messengerIcon');
 let githubIcon = document.querySelector('#githubIcon');
-let fbIcon = document.querySelector('#fbIcon');
-let contactMessengerIcon = document.querySelector('#contactMessengerIcon');
+// let fbIcon = document.querySelector('#fbIcon');
+// let contactMessengerIcon = document.querySelector('#contactMessengerIcon');
 let contactGithubIcon = document.querySelector('#contactGithubIcon');
-let contactFbIcon = document.querySelector('#contactFbIcon');
-let mailIcon = document.querySelector('#mailIcon');
+// let contactFbIcon = document.querySelector('#contactFbIcon');
+// let mailIcon = document.querySelector('#mailIcon');
 let blackBg = document.querySelector('.blackBg');
 let orangeBg = document.querySelector('.orangeBg');
 let allAvatar = document.querySelector('.home_avatar');
@@ -399,17 +399,17 @@ window.addEventListener('load', load);
 // window.addEventListener('scroll', describeParasSlide);
 // window.addEventListener('scroll', aboutHeadersSlide);
 
-let email = document.querySelector('.e-mail');
-function showEmail() {
-    if (email.getBoundingClientRect().top < screenHeight) {
-        setTimeout(() => {
-            email.classList.add('animate__fadeIn');
-        }, 490);
-        setTimeout(() => {
-            email.style.visibility = 'visible';
-        }, 500);
-    }
-}
+// let email = document.querySelector('.e-mail');
+// function showEmail() {
+//     if (email.getBoundingClientRect().top < screenHeight) {
+//         setTimeout(() => {
+//             email.classList.add('animate__fadeIn');
+//         }, 490);
+//         setTimeout(() => {
+//             email.style.visibility = 'visible';
+//         }, 500);
+//     }
+// }
 let orderButton = document.querySelectorAll('.order_button');
 setTimeout(() => {
     for (let i = 0; i < orderButton.length; i++) {
@@ -525,11 +525,11 @@ slideHamburger = function () {
 
 };
 dropDownSocialIcons = function () {
-    setTimeout(() => { mailIcon.classList.add('animate__bounceInDown'); mailIcon.style.visibility = 'visible'; }, 500);
-    setTimeout(() => { messengerIcon.classList.add('animate__bounceInDown'); messengerIcon.style.visibility = 'visible'; }, 700);
+//     setTimeout(() => { mailIcon.classList.add('animate__bounceInDown'); mailIcon.style.visibility = 'visible'; }, 500);
+//     setTimeout(() => { messengerIcon.classList.add('animate__bounceInDown'); messengerIcon.style.visibility = 'visible'; }, 700);
     setTimeout(() => { githubIcon.classList.add('animate__bounceInDown'); githubIcon.style.visibility = 'visible'; }, 600);
-    setTimeout(() => { mailIcon.classList.remove('animate__bounceInDown'); }, 2000);
-    setTimeout(() => { messengerIcon.classList.remove('animate__bounceInDown'); }, 2100);
+//     setTimeout(() => { mailIcon.classList.remove('animate__bounceInDown'); }, 2000);
+//     setTimeout(() => { messengerIcon.classList.remove('animate__bounceInDown'); }, 2100);
     setTimeout(() => { githubIcon.classList.remove('animate__bounceInDown'); }, 2200);
 };
 dropDownSocialIcons();
