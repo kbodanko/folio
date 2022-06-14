@@ -377,7 +377,7 @@ function load() {
     techSkillsFlip();
     portfolioDisplay();
     tittleSlide();
-    aboutWorksBgSlide();
+//     aboutWorksBgSlide();
     showExamplePhoto();
     describeParasSlide();
     aboutHeadersSlide();
