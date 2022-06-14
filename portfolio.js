@@ -289,11 +289,12 @@ describeParasSlide = function () {
     }
 };
 let aboutWorksBg = document.querySelector('.about_works');
-aboutWorksBgSlide = function () {
-    if (aboutWorksBg.getBoundingClientRect().top < 200) {
-        aboutWorksBg.style.transform = 'translateX(0) translateY(0)';
-    }
-};
+aboutWorksBg.style.display='none';
+// aboutWorksBgSlide = function () {
+//     if (aboutWorksBg.getBoundingClientRect().top < 200) {
+//         aboutWorksBg.style.transform = 'translateX(0) translateY(0)';
+//     }
+// };
 let contactBg = document.querySelector('.contact_bg');
 let contact = document.querySelector('.kontakt');
 contactSlide = function () {
