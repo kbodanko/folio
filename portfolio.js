@@ -199,12 +199,12 @@ for (let i = 0; i < socialIcons.length; i++) {
     });
     console.log('headShakeOn');
 }
-setTimeout(() => {
+// setTimeout(() => {
 
-    frontend.style.visibility = 'visible';
-    homeDescription.classList.add('animate__fadeIn'); homeDescription.style.visibility = 'visible';
-}, 500);
-frontend.classList.add('animate__zoomIn');
+//     frontend.style.visibility = 'visible';
+//     homeDescription.classList.add('animate__fadeIn'); homeDescription.style.visibility = 'visible';
+// }, 500);
+// frontend.classList.add('animate__zoomIn');
 
 // setTimeout(() => { frontend.style.visibility = 'visible'; }, 300);
 blackBg.style.transform = 'translateX(0) translateY(0)';
