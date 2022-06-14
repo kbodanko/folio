@@ -245,11 +245,12 @@ a {
 .home_description_name_over800 {
   animation: typewriterWide 1s steps(17) 1s 1 normal both;
 }
+.home_description_p{
 margin: 0;
 font-family: 'Roboto', sans-serif;
 font-weight: 700;
 font-size: 2rem;
-
+}
 .home_description_frontend {
   font-size: 3.7rem;
   font-variant: small-caps;
