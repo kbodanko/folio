@@ -151,7 +151,7 @@ winePage.addEventListener('click', scrollToMore);
 //     mailIcon.classList.remove('animate__headShake');
 // });
 let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "http://all4desktop.com/data_images/original/4189613-digital-abstract-eye-2.jpg"];
-let webSlideContent = ['xd/mob/wine2.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png',];
+let webSlideContent = ['xd/mob/wine.png', 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png',];
 let webSlideUrl = ['https://kbodanko.github.io/wine-page/', 'https://kbodanko.github.io/doc/', 'https://kbodanko.github.io/BigBangGameVue/', 'https://kbodanko.github.io/Layan_konfigurator/'];
 function fillDesignSlider() {
     let slidesDesign = document.querySelectorAll('.swiper_slide_design');
