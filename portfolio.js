@@ -14,8 +14,8 @@ let handWraper = document.querySelector('.home_hand_img');
 let hand = document.querySelector('#hand');
 let hiWraper = document.querySelector('.home_hi_img');
 let hi = document.querySelector('#hi');
-let frontend = document.querySelector('.home_description_frontend');
-let developer = document.querySelector('.home_description_developer');
+// let frontend = document.querySelector('.home_description_frontend');
+// let developer = document.querySelector('.home_description_developer');
 let homeDescription = document.querySelector('.home_description_about');
 let line1 = document.querySelector('#line1');
 let line2 = document.querySelector('#line2');
@@ -208,12 +208,12 @@ for (let i = 0; i < socialIcons.length; i++) {
 
 // setTimeout(() => { frontend.style.visibility = 'visible'; }, 300);
 blackBg.style.transform = 'translateX(0) translateY(0)';
-setTimeout(() => {
-    developer.style.animationName = 'rotate';
-}, 300);
-setTimeout(() => {
-    developer.style.visibility = 'visible';
-}, 1000);
+// setTimeout(() => {
+//     developer.style.animationName = 'rotate';
+// }, 300);
+// setTimeout(() => {
+//     developer.style.visibility = 'visible';
+// }, 1000);
 ejectAvatar = function () {
     avatar.classList.add('animate__bounceInRight'); avatar.style.visibility = 'visible';
     hand.style.animationName = 'wagging';
