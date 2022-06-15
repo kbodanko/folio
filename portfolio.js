@@ -400,16 +400,16 @@ window.addEventListener('load', load);
 // window.addEventListener('scroll', aboutHeadersSlide);
 
 // let email = document.querySelector('.e-mail');
-// function showEmail() {
-//     if (email.getBoundingClientRect().top < screenHeight) {
-//         setTimeout(() => {
-//             email.classList.add('animate__fadeIn');
-//         }, 490);
-//         setTimeout(() => {
-//             email.style.visibility = 'visible';
-//         }, 500);
-//     }
-// }
+function showEmail() {
+    if (email.getBoundingClientRect().top < screenHeight) {
+        setTimeout(() => {
+            email.classList.add('animate__fadeIn');
+        }, 490);
+        setTimeout(() => {
+            email.style.visibility = 'visible';
+        }, 500);
+    }
+}
 let orderButton = document.querySelectorAll('.order_button');
 setTimeout(() => {
     for (let i = 0; i < orderButton.length; i++) {
