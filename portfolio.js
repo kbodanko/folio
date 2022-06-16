@@ -153,7 +153,7 @@ winePage.addEventListener('click', scrollToMore);
 let designSlideContent = ["xd/mob/good.png", "xd/mounts.png", "xd/phones4.png", "xd/ala.png", "xd/Group12.png", "xd/Desktop2.png"];
 
 // let designSlideContent = ['xd/mob/good.png', 'xd/mounts.png', 'xd/phones4.png', "http://all4desktop.com/data_images/original/4189613-digital-abstract-eye-2.jpg"];
-let webSlideContent = [' 'xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png', 'xd/mob/wine.png'];
+let webSlideContent = ['xd/mob/doc.png', 'xd/mob/BigBangGame.png', 'xd/mob/Konfigurator.png', 'xd/mob/wine.png'];
 let webSlideUrl = ['https://kbodanko.github.io/doc/', 'https://kbodanko.github.io/BigBangGameVue/', 'https://kbodanko.github.io/Layan_konfigurator/', 'https://kbodanko.github.io/wine-page/'];
 function fillDesignSlider() {
     let slidesDesign = document.querySelectorAll('.swiper_slide_design');
