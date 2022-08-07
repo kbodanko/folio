@@ -698,7 +698,7 @@ font-size: 2rem;
 }
 
 .e-mail {
-  visibility: hidden;
+/*   visibility: hidden; */
   transition: .5s !important;
   animation-delay: .2s !important;
 }
