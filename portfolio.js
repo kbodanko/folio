@@ -28,51 +28,55 @@ let more = document.querySelectorAll('.example_photo_more');
 let postApo = document.querySelector('#post_apo');
 let winePage = document.querySelector('#wine_page');
 let screenHeight = window.innerHeight - 100;
-let swiperButtons = document.querySelector('.swiper-button-prev', '.swiper-button-next');
-let prev = document.querySelector('.swiper-button-prev');
-let webImg = document.querySelectorAll('.swiper_slide_web');
-let designImg = document.querySelectorAll('.swiper_slide_design');
-let wine = document.querySelector('#wine');
-let bbg = document.querySelector('#bbg');
-let doc = document.querySelector('#doc');
-let layan = document.querySelector('#layan');
+// let swiperButtons = document.querySelector('.swiper-button-prev', '.swiper-button-next');
+// let prev = document.querySelector('.swiper-button-prev');
+// let webImg = document.querySelectorAll('.swiper_slide_web');
+// let designImg = document.querySelectorAll('.swiper_slide_design');
+// let wine = document.querySelector('#wine');
+// let bbg = document.querySelector('#bbg');
+// let doc = document.querySelector('#doc');
+// let layan = document.querySelector('#layan');
 
 function wwwwExampleDarken() {
-    let wwwExamples = [wine, bbg, doc, layan];
-    let wwwExamplesDarkSrc = ['xd/mob/wine_dark.png', 'xd/mob/bigBangGame_dark.png', 'xd/mob/doc_dark.png', 'xd/mob/layan_dark.png',];
-    let wwwExamplesSrc = ['xd/mob/wine.png', 'xd/mob/bigBangGame.png', 'xd/mob/doc.png', 'xd/mob/layan.png',];
-    let wwwDescribe = document.querySelectorAll('.www_describe');
+    let examples = document.querySelectorAll('.example');
+    let wwwExamples = document.querySelectorAll('.www_example');
 
+    // let wwwExamplesDarkSrc = ['xd/mob/wine_dark.png', 'xd/mob/bigBangGame_dark.png', 'xd/mob/doc_dark.png', 'xd/mob/layan_dark.png',];
+    // let wwwExamplesSrc = ['xd/mob/wine.png', 'xd/mob/bigBangGame.png', 'xd/mob/doc.png', 'xd/mob/layan.png',];
+    // let wwwDescribe = document.querySelectorAll('.www_describe');
+    // let uxDescribe = (document.querySelectorAll('.ux_describe'));
+    let Describe = document.querySelectorAll('.disappear');
+    console.log(Describe.length);
 
     for (let i = 0; i < wwwExamples.length; i++) {
-        wwwExamples[i].addEventListener('mouseover', function () {
+        examples[i].addEventListener('mouseover', function () {
             wwwExamples[i].style.filter = 'brightness(10%)';
             // wwwExamples[i].setAttribute('src', wwwExamplesDarkSrc[i]);
-            wwwDescribe[i].style.visibility = 'visible';
+            Describe[i].style.visibility = 'visible';
 
         });
-        wwwDescribe[i].addEventListener('mouseover', function () {
+        Describe[i].addEventListener('mouseover', function () {
             wwwExamples[i].style.filter = 'brightness(10%)';
 
             // wwwExamples[i].setAttribute('src', wwwExamplesDarkSrc[i]);
-            wwwDescribe[i].style.visibility = 'visible';
+            Describe[i].style.visibility = 'visible';
 
         });
     }
     for (let i = 0; i < wwwExamples.length; i++) {
-        wwwExamples[i].addEventListener('mouseleave', function () {
+        examples[i].addEventListener('mouseleave', function () {
             // wwwExamples[i].setAttribute('src', wwwExamplesSrc[i]);
             wwwExamples[i].style.filter = 'brightness(100%)';
 
-            wwwDescribe[i].style.visibility = 'hidden';
+            Describe[i].style.visibility = 'hidden';
 
             console.log('leve');
         });
-        wwwDescribe[i].addEventListener('mouseleave', function () {
+        Describe[i].addEventListener('mouseleave', function () {
             wwwExamples[i].style.filter = 'brightness(100%)';
 
             // wwwExamples[i].setAttribute('src', wwwExamplesSrc[i]);
-            wwwDescribe[i].style.visibility = 'hidden';
+            Describe[i].style.visibility = 'hidden';
 
         });
 
@@ -368,7 +372,7 @@ slideContactSocialIcons = function () {
         // setTimeout(() => { contactFbIcon.classList.remove('animate__bounceInLeft'); }, 2200);
     }
 };
-let aboutWorksIconsWraper = document.querySelectorAll('.about_works_icons_wraper');
+let aboutWorksIconsWraper = document.querySelectorAll('#githubIcon');
 function showIcons() {
     for (let i = 0; i < aboutWorksIconsWraper.length; i++) {
         // console.log(aboutWorksIconsWraper[i].getBoundingClientRect().top, topHeight, aboutWorksIconsWraper[i].classList);

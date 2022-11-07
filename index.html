@@ -24,6 +24,10 @@
         <div class="pop_up"></div>
     </div>
     <div class="home_menu">
+        <div class="social_icons">
+            <a href="https://github.com/kbodanko"><img class="social_icons_img animate__animated" id="githubIcon"
+                    src="xd/mob/github-logo(1).png" alt="github logo" tabindex="0"></a>
+        </div>
         <div class="home_menu_close">
             <img class="home_menu_close_img" src="xd/mob/close.png">
         </div>
@@ -31,9 +35,6 @@
             <div class="home_menu_p" id="home">
                 <a href="#home#" class="home_menu_p_content" tabindex="0">home</a>
             </div>
-            <!-- <div class="home_menu_p" id="about">
-                <a href="#about#" class="home_menu_p_content" tabindex="0">o mnie</a>
-            </div> -->
             <div class="home_menu_p" id="portfolio">
                 <a href="#portfolio#" class="home_menu_p_content" tabindex="0">portfolio</a>
             </div>
@@ -47,21 +48,8 @@
     </div>
     <div class="blur_container">
         <div class="home" id="home#">
-            <!-- <div class="home_bg">
-                    <img class="blackBg" src="xd/mob/blackBg.png" alt="black background">
-                    <img class="orangeBg" src="xd/mob/orangeBg.png" alt="orange background">
-                </div> -->
             <nav>
-                <div class="social_icons">
-                    <!--                     <a href=""><img class="social_icons_img animate__animated" id="messengerIcon"
-                            src="xd/mob/messenger.png" alt="messenger logo" tabindex="0"></a> -->
-                    <a href="https://github.com/kbodanko"><img class="social_icons_img animate__animated"
-                            id="githubIcon" src="xd/mob/github-logo(1).png" alt="github logo" tabindex="0"></a>
-                    <!-- <a href=""><img class="social_icons_img animate__animated" id="fbIcon" src="xd/mob/facebook.png"
-                    alt="facebook logo"> -->
-                    <!--                     <img class="social_icons_img animate__animated" id="mailIcon" src="xd/mob/e-mail.png"
-                        alt="email icon" tabindex="0"> -->
-                </div>
+
                 <div class="home_hamburger_menu">
                     <img class="home_hamburger_menu_img" id="line1" src="xd/mob/Line 1.png" alt="hamburger menu icon">
                     <img class="home_hamburger_menu_img" id="line2" src="xd/mob/Line 2.png" alt="hamburger menu icon">
@@ -76,9 +64,6 @@
                     <div class="home_hand_img animate__animated">
                         <img id="hand" src="xd/mob/hand.png" alt="avatar's hand">
                     </div>
-                    <!-- <div class="home_hi_img animate__animated">
-                        <img id="hi" src="xd/mob/hi.png" alt="avatar's says 'hi'">
-                    </div> -->
                 </div>
                 <header>
                     <div class="home_description">
@@ -87,13 +72,11 @@
                             <p class="home_description_p animate__animated">UI/UX designer</p>
                             <p class="home_description_p">frontend developer</p>
                         </div>
-                        <p class="home_description_about animate__animated">Technologią i sztuką tworzenia interesuję
-                            się od
-                            zawsze. Od trzech lat programuję 'po godzinach', a niemal dwa lata temu zaczęłam rozwijać
-                            się
-                            również w kierunku grafiki wektorowej oraz UX/UI designu i z tą tematyką wiążę swoją
-                            zawodową
-                            przyszłość.
+                        <p class="home_description_about animate__animated">Zajmuję się projektowaniem i programowaniem.
+                            Od trzech lat rozwijam się we frontendzie, realizując projekty indywidualne i grupowe.
+                            Specjalizuję się w nowoczesnych one-page'ach, lubię również programować gry. Programowanie
+                            łączę z zagadnieniami UI/UX i cały czas poszerzam wiedzę z obu dziedzin. Bardzo zależy mi na
+                            rozwijaniu moich obecnych umiejętności i zdobywaniu kolejnych.
                         </p>
                     </div>
                 </header>
@@ -110,33 +93,36 @@
                     <p class="tittle animate__animated" id="more_www">Aplikacje & strony WWW</p>
                 </div>
                 <div class="examples_wrapper">
-                    <a href="https://kbodanko.github.io/wine-page/">
+                    <a class="example" href="https://kbodanko.github.io/wine-page/">
                         <img id="wine" class="www_example" src="xd/mob/wine.png">
-                        <p class="www_describe">Mój projekt strony internetowej winnicy. Postawiłem na estetykę, dobry
+                        <p class="www_describe disappear">Mój projekt strony internetowej winnicy. Postawiłem na
+                            estetykę, dobry
                             UX i wygodne rozwiązania. I trochę animacji. Wygodne menu wyświetlające się dynamicznie i
                             strzałka powrotu do góry. Strona umożliwia zwijanie i rozwijanie niektórych treści i jest w
                             pełni responsywna.</p>
-                        <p class="www_tittle">Wine page</p>
+                        <p class="www_tittle www_tittle_left">Wine page</p>
                     </a>
-                    <a href="https://kbodanko.github.io/BigBangGameVue/">
+                    <a class="example" href="https://kbodanko.github.io/BigBangGameVue/">
                         <img id="bbg" class="www_example" src="xd/mob/bigBangGame.png">
-                        <p class="www_describe">Znana gra „kamień, papier, nożyce” wzbogacona o wariację z serii „Teoria
+                        <p class="www_describe disappear">Znana gra „kamień, papier, nożyce” wzbogacona o wariację z
+                            serii „Teoria
                             wielkiego podrywu”. Zawiera dodatkowe elementy jak jaszczurka i Spock :) To mój pierwszy
                             projekt w Vue js. Użyłam biblioteki https://wiredjs.com/, aby sprawić wrażenie trochę
                             niechlujnego stylu. Zasady są opisane na stronie.</p>
-                        <p class="www_tittle">Rock, Paper, Scissors, Lizard, Spock</p>
+                        <p class="www_tittle www_tittle_left">Rock, Paper, Scissors, Lizard, Spock</p>
                     </a>
-                    <a href="https://kbodanko.github.io/doc/">
+                    <a class="example" href="https://kbodanko.github.io/doc/">
                         <img id="doc" class="www_example" src="xd/mob/doc.png">
-                        <p class="www_describe">A skecth of a small health-center's website </p>
-                        <p class="www_tittle">Medical clinic</p>
+                        <p class="www_describe disappear">A skecth of a small health-center's website </p>
+                        <p class="www_tittle www_tittle_left">Medical clinic</p>
                     </a>
-                    <a href="https://kbodanko.github.io/Layan_konfigurator/">
+                    <a class="example" href="https://kbodanko.github.io/Layan_konfigurator/">
                         <img id="layan" class="www_example" src="xd/mob/layan.png">
-                        <p class="www_describe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh
+                        <p class="www_describe disappear">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Proin nibh
                             augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque
                             aliquet tellus. Phasellus pharetra nulla ac diam. Quisque semper justo at risus.</p>
-                        <p class="www_tittle">Layan</p>
+                        <p class="www_tittle www_tittle_left">Layan</p>
                     </a>
 
 
@@ -146,17 +132,19 @@
                     <p class="tittle animate__animated" id="more_graphics">UX/UI Design</p>
                 </div>
                 <div class="examples_wrapper">
-                    <a href="https://kbodanko.github.io/Pre-schoolApp/">
+                    <a class="example" href="https://kbodanko.github.io/Pre-schoolApp/">
                         <img id="Pre-schoolApp" class="www_example" src="xd/mob/Pre-schoolApp.png">
-                        <p class="www_describe">Mój najnowszy projekt, powstał podczas kursu UX Designer Future Collars.
+                        <p class="ux_describe disappear">Mój najnowszy projekt, powstał podczas kursu UX Designer Future
+                            Collars.
                             Obejmuje pełny proces projektowy od strony UX/UI designera - research, badania użytkowników,
                             design system, architektura informacji, makiety i prototypy, testy użyteczności, finalny
                             projekt aplikacji.</p>
                         <p class="www_tittle">Pre-schoolApp</p>
                     </a>
-                    <a href="https://kbodanko.github.io/Pre-schoolApp/">
+                    <a class="example" href="xd/mob/good.png">
                         <img id="Pre-schoolApp" class="www_example" src="xd/mob/beGood.png">
-                        <p class="www_describe">Mój najnowszy projekt, powstał podczas kursu UX Designer Future Collars.
+                        <p class="ux_describe disappear">Mój najnowszy projekt, powstał podczas kursu UX Designer Future
+                            Collars.
                             Obejmuje pełny proces projektowy od strony UX/UI designera - research, badania użytkowników,
                             design system, architektura informacji, makiety i prototypy, testy użyteczności, finalny
                             projekt aplikacji.</p>
@@ -201,27 +189,21 @@
     <div class="contact_bg" id="contact#">
         <article class="kontakt">
             <div class="style_tittle animate__animated">
-                <p class="tittle animate__animated">Skontaktuj się</p>
+                <p class="tittle animate__animated">Kontakt</p>
             </div>
             <div class="social_icons">
-                <!--                 <img class="social_icons_img animate__animated" id="contactMessengerIcon" src="xd/mob/messenger.png"
-                    alt="messenger logo"> -->
                 <img class="social_icons_img animate__animated" id="contactGithubIcon" src="xd/mob/github-logo(1).png"
                     alt="github logo">
-                <!--                 <img class="social_icons_img animate__animated" id="contactFbIcon" src="xd/mob/facebook.png"
-                    alt="facebook logo"> -->
             </div>
             <p class="e-mail animate__animated">katarzyna.bodanko@gmail.com</p>
-            <p class="tittle animate__animated">lub</p>
-            <button class="order_button animate__animated">Zamów swój projekt
-                <img class="button_arrow" src="xd/mob/Group 227.png" alt="double right arrows">
-            </button>
-            <footer class="contact_signature_bg">
-                <p class="contact_signature">Copyright 2022 © kbodanko</p>
-            </footer>
+
+
         </article>
     </div>
     </div>
+    <footer class="contact_signature_bg">
+        <p class="contact_signature">Copyright 2022 © kbodanko</p>
+    </footer>
 
     <script type="text/javascript" src="portfolio.js"></script>
 
