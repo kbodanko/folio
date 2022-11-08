@@ -642,4 +642,3 @@ closeMenu = function () {
 close.addEventListener('click', openCloseMenu);
 hamburgerMenu.addEventListener('click', openCloseMenu);
 let notMenu = !menu;
-// window.addEventListener('click', closeMenu);
