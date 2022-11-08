@@ -363,7 +363,7 @@ a:hover {
 
 .tech_skill_tittle {
   text-align: center;
-  font-size: .9rem;
+  font-size: .7rem;
 }
 
 .tech_skill_icon {
@@ -521,6 +521,9 @@ a:hover {
   }
   .home_hamburger_menu {
     display: none;
+  }
+  .tech_skill_tittle {
+    font-size: .9rem;
   }
   .toparrow {
     width: 4rem;
