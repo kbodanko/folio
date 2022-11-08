@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # Portfolio
-## live: https://kbodanko.github.io/portfolio/
+## live: https://kbodanko.github.io/folio/
 
-![page screen](https://github.com/kbodanko/portfolio/blob/main/portfolio.png)
+![page screen](https://github.com/kbodanko/portfolio/blob/main/folio.png)
 
 =======
 # projects
