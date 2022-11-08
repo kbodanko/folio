@@ -81,6 +81,13 @@ footer {
   justify-content: end;
 }
 
+footer a {
+  padding: 0;
+  margin-left: .5rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
 .home_menu {
   display: flex;
   align-items: center;
@@ -193,14 +200,14 @@ footer {
 .home_hand_img,
 .home_hi_img {
   position: absolute;
-  top: 18vh;
+  top: 10vh;
   z-index: 3;
   right: 0;
 }
 
 .home_avatar_img img,
 .home_hi_img img {
-  width: 16rem;
+  width: 12rem;
 }
 
 .home_hand_img img {
@@ -211,8 +218,8 @@ footer {
 
 .home_hand_img {
   z-index: 2;
-  margin-top: 2rem;
-  margin-right: 1rem;
+  margin-top: .4rem;
+  margin-right: .4rem;
 }
 
 .home_description {
@@ -255,8 +262,8 @@ footer {
 }
 
 .home_description_about {
-  width: 60%;
-  margin-top: 3rem;
+  width: 80%;
+  margin-top: 6rem;
   font-size: .9rem;
   line-height: 1.7;
 }
@@ -296,7 +303,7 @@ footer {
 }
 
 .www_example {
-  width: 70vw;
+  width: 80vw;
   margin-bottom: .5rem;
   cursor: pointer;
 }
@@ -335,7 +342,7 @@ footer {
 
 .www_describe,
 .ux_describe {
-  font-size: .9rem;
+  font-size: .8rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -411,6 +418,7 @@ footer {
 }
 
 .contact_signature {
+  margin: 0;
   text-align: end;
   font-size: .8rem;
 }
@@ -558,9 +566,11 @@ footer {
   .www_describe {
     width: 80%;
     margin-left: -5vw;
+    font-size: .9rem;
   }
   .ux_describe {
     width: 90%;
+    font-size: .9rem;
   }
   .www_example {
     width: 40vw;
