@@ -217,7 +217,7 @@ footer {
 
 .home_description {
   margin-top: 20%;
-  margin-left: 2rem;
+  margin-left: 1rem;
   z-index: 2;
 }
 
@@ -302,8 +302,7 @@ footer {
 }
 
 .portfolio {
-  margin-top: 4rem;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .portfolio_header {
@@ -316,7 +315,6 @@ footer {
   font-variant: small-caps;
   font-size: 3rem;
   margin-top: 0;
-  margin-bottom: 8rem;
   font-weight: 200;
 }
 
@@ -327,12 +325,12 @@ footer {
 }
 
 .www_describe {
-  width: 60%;
+  width: 80%;
   margin-left: -8vw;
 }
 
 .ux_describe {
-  width: 60%;
+  width: 80%;
 }
 
 .www_describe,
@@ -349,7 +347,7 @@ footer {
 .technologie,
 .kontakt {
   margin-top: 10rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .tech_skill_wraper {
@@ -544,6 +542,12 @@ footer {
   .home_description_developer {
     width: 430px;
     font-size: 2rem;
+  }
+  .portfolio {
+    margin-top: 4rem;
+  }
+  .portfolio_header_tittle {
+    margin-bottom: 8rem;
   }
   .examples_wrapper {
     display: grid;
