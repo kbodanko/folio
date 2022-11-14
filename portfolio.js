@@ -238,6 +238,28 @@ function scrollToElement() {
     closeMenu();
 
 }
+function ejectAvatar() {
+    let avatar = document.querySelector('#avatar');
+
+    // avatar.classList.add('animate__bounceInRight'); avatar.style.visibility = 'visible';
+
+    // handWraper.classList.add('animate__bounceInRight'); handWraper.style.visibility = 'visible';
+    // setTimeout(() => {
+    //     hiWraper.classList.add('animate__zoomIn'); hiWraper.style.visibility = 'visible';
+    // }, 900);
+    // setTimeout(() => {
+    //     hiWraper.classList.add('animate__zoomOut');
+    // }, 2500);
+
+    setTimeout(() => { avatar.classList.add('animate__bounceInRight'); avatar.style.visibility = 'visible'; }, 100);
+    // setTimeout(() => {
+
+    //     hand.style.animation = 'none';
+    // }, 500);
+
+}
+ejectAvatar();
+
 function scrollToTop() {
     console.log('top');
     rootElement.scrollTo({

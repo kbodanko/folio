@@ -21,7 +21,7 @@ nav {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 span {
@@ -302,6 +302,11 @@ footer a {
   margin: 2rem 0;
 }
 
+.www_example:hover {
+  transition: .3s;
+  transform: scale(1.05);
+}
+
 .www_example {
   width: 80vw;
   margin-bottom: .5rem;
@@ -347,8 +352,12 @@ footer a {
   line-height: 1.5;
 }
 
+.www_tittle {
+  white-space: nowrap;
+}
+
 .www_tittle_left {
-  margin-left: -3rem;
+  margin-left: -2rem;
 }
 
 .technologie,
@@ -480,6 +489,9 @@ footer a {
 }
 
 @media (min-width: 500px) {
+  .www_tittle_left {
+    margin-left: -3rem;
+  }
   .example_photo {
     height: 25rem;
   }
@@ -673,6 +685,13 @@ footer a {
   }
   .home_hand_img img {
     width: 4rem;
+  }
+  .animate__bounceInRight {
+    animation-duration: 1s !important;
+  }
+  #avatar {
+    visibility: hidden;
+    animation-duration: 1s;
   }
   .about_works {
     padding-bottom: 15rem;
