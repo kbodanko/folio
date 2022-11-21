@@ -302,6 +302,10 @@ footer a {
   margin: 2rem 0;
 }
 
+.example_graphics_wrapper {
+  grid-template-columns: repeat(1, 1fr);
+}
+
 .www_example:hover {
   transition: .3s;
   transform: scale(1.05);
@@ -311,6 +315,10 @@ footer a {
   width: 80vw;
   margin-bottom: .5rem;
   cursor: pointer;
+}
+
+.www_example_graphics {
+  width: 80vw;
 }
 
 .portfolio {
@@ -569,11 +577,17 @@ footer a {
   .portfolio_header_tittle {
     margin-bottom: 8rem;
   }
-  .examples_wrapper {
+  .examples_wrapper,
+  .examples_graphics_wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
     margin: 4rem 0;
+  }
+  .examples_graphics_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 80%;
   }
   .www_describe {
     width: 80%;
@@ -586,6 +600,9 @@ footer a {
   }
   .www_example {
     width: 40vw;
+  }
+  .www_example_graphics {
+    width: 20vw;
   }
   .about_works {
     transform: translateX(-70rem);
