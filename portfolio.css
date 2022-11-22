@@ -302,7 +302,7 @@ footer a {
   margin: 2rem 0;
 }
 
-.example_graphics_wrapper {
+.examples_graphics_wrapper {
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -585,7 +585,7 @@ footer a {
     margin: 4rem 0;
   }
   .examples_graphics_wrapper {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 80%;
   }
@@ -602,17 +602,7 @@ footer a {
     width: 40vw;
   }
   .www_example_graphics {
-    width: 20vw;
-  }
-  .about_works {
-    transform: translateX(-70rem);
-  }
-  .swiper-slide {
-    height: 32rem !important;
-  }
-  .swiper-button-next,
-  .swiper-button-prev {
-    margin-top: 14rem !important;
+    width: 40vw;
   }
 }
 
@@ -656,6 +646,12 @@ footer a {
   .ux_describe {
     font-size: .9rem;
   }
+  .examples_graphics_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .www_example_graphics {
+    width: 20vw;
+  }
   .home_description,
   .technologie,
   .kontakt {
@@ -682,6 +678,10 @@ footer a {
   }
   .portfolio {
     padding-left: 5rem;
+  }
+  .examples_graphics_wrapper {
+    grid-template-columns: repeat(4, 1fr);
+    width: 20vw;
   }
   .home_hand_img img {
     width: 2rem;
